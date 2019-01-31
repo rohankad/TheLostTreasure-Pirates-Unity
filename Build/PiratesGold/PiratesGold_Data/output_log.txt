@@ -1,0 +1,84 @@
+Initialize engine version: 5.4.0f3 (a6d8d714de6f)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 10.0]
+    Renderer: NVIDIA Quadro FX 1800 (ID=0x638)
+    Vendor:   NVIDIA
+    VRAM:     749 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: F:\Unity Projects\Rohan RnD\Pirates3D\Build\PiratesGold\PiratesGold_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading F:\Unity Projects\Rohan RnD\Pirates3D\Build\PiratesGold\PiratesGold_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: F:\Unity Projects\Rohan RnD\Pirates3D\Build\PiratesGold\PiratesGold_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading F:\Unity Projects\Rohan RnD\Pirates3D\Build\PiratesGold\PiratesGold_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: F:\Unity Projects\Rohan RnD\Pirates3D\Build\PiratesGold\PiratesGold_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading F:\Unity Projects\Rohan RnD\Pirates3D\Build\PiratesGold\PiratesGold_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: F:\Unity Projects\Rohan RnD\Pirates3D\Build\PiratesGold\PiratesGold_Data\Managed\Assembly-UnityScript-firstpass.dll (this message is harmless)
+Loading F:\Unity Projects\Rohan RnD\Pirates3D\Build\PiratesGold\PiratesGold_Data\Managed\Assembly-UnityScript-firstpass.dll into Unity Child Domain
+Platform assembly: F:\Unity Projects\Rohan RnD\Pirates3D\Build\PiratesGold\PiratesGold_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
+Loading F:\Unity Projects\Rohan RnD\Pirates3D\Build\PiratesGold\PiratesGold_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
+Platform assembly: F:\Unity Projects\Rohan RnD\Pirates3D\Build\PiratesGold\PiratesGold_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading F:\Unity Projects\Rohan RnD\Pirates3D\Build\PiratesGold\PiratesGold_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: F:\Unity Projects\Rohan RnD\Pirates3D\Build\PiratesGold\PiratesGold_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading F:\Unity Projects\Rohan RnD\Pirates3D\Build\PiratesGold\PiratesGold_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: F:\Unity Projects\Rohan RnD\Pirates3D\Build\PiratesGold\PiratesGold_Data\Managed\BTUGameAPI.dll (this message is harmless)
+Loading F:\Unity Projects\Rohan RnD\Pirates3D\Build\PiratesGold\PiratesGold_Data\Managed\BTUGameAPI.dll into Unity Child Domain
+Platform assembly: F:\Unity Projects\Rohan RnD\Pirates3D\Build\PiratesGold\PiratesGold_Data\Managed\log4net.dll (this message is harmless)
+Loading F:\Unity Projects\Rohan RnD\Pirates3D\Build\PiratesGold\PiratesGold_Data\Managed\log4net.dll into Unity Child Domain
+- Completed reload, in  0.600 seconds
+Platform assembly: F:\Unity Projects\Rohan RnD\Pirates3D\Build\PiratesGold\PiratesGold_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: F:\Unity Projects\Rohan RnD\Pirates3D\Build\PiratesGold\PiratesGold_Data\Managed\System.dll (this message is harmless)
+<RI> Initializing input.
+<RI> Input initialized.
+desktop: 1920x1080 60Hz; virtual: 3200x1080 at 0,0
+<RI> Initialized touch support.
+UnloadTime: 0.714471 ms
+Args:F:\Unity Projects\Rohan RnD\Pirates3D\Build\PiratesGold\PiratesGold.exe
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Platform assembly: F:\Unity Projects\Rohan RnD\Pirates3D\Build\PiratesGold\PiratesGold_Data\Managed\System.Xml.dll (this message is harmless)
+Platform assembly: F:\Unity Projects\Rohan RnD\Pirates3D\Build\PiratesGold\PiratesGold_Data\Managed\System.Configuration.dll (this message is harmless)
+Games.xml not found at D:\Bally\Common\MediaAndGames\Games\Games.xml. Using defaults.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Log config not found at D:\Bally\Common\MediaAndGames\Games\BTUGameAPI.dll.config. Using Embedded resource.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Platform assembly: F:\Unity Projects\Rohan RnD\Pirates3D\Build\PiratesGold\PiratesGold_Data\Managed\System.Web.dll (this message is harmless)
+Unable to load Internationalized Strings from D:\Bally\Common\MediaAndGames\games\GameFramework\UserMessages\.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+User Message Language Switched but no literal mapping available
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Unable to load Internationalized Strings from F:/Unity Projects/Rohan RnD/Pirates3D/Build/PiratesGold/PiratesGold_Data/StreamingAssets/Strings/.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Language Switched but no literal mapping available
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Unable to connect to launcher:READY
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 3200 -> priority: 1 
+  Thread -> id: 33c4 -> priority: 1 
+Searching.............
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Canon Reached
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+chest opened
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+

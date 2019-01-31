@@ -1,0 +1,28 @@
+2017-02-01 09:53:50,488 INFOGF    BTLogManager: Log System Initialized
+2017-02-01 09:53:51,169 WARN      BTLogManager: Unable to load Internationalized Strings from D:\Bally\Common\MediaAndGames\games\GameFramework\UserMessages\.
+2017-02-01 09:53:51,174 INFOGF    BTLogManager: User Message Language Set To English (United States)/en-US
+2017-02-01 09:53:51,177 WARN      BTLogManager: User Message Language Switched but no literal mapping available
+2017-02-01 09:53:51,180 INFOGF    BTLogManager: Loading default embedded en-US culture
+2017-02-01 09:53:51,218 WARN      BTLogManager: Unable to load Internationalized Strings from F:/Unity Projects/Rohan RnD/Pirates3D/Build/PiratesGold/PiratesGold_Data/StreamingAssets/Strings/.
+2017-02-01 09:53:51,221 INFOGF    BTLogManager: Language Set To English (United States)/en-US
+2017-02-01 09:53:51,222 WARN      BTLogManager: Language Switched but no literal mapping available
+2017-02-01 09:53:52,233 WARN      BTLogManager: Unable to connect to launcher:READY
+2017-02-01 09:54:12,233 INFO      BTLogManager: Boat selected : BlackPearl1
+2017-02-01 09:54:12,753 INFO      BTLogManager: Searching.............
+2017-02-01 09:54:14,752 INFO      BTLogManager: Canon Reached
+2017-02-01 09:54:27,759 INFO      BTLogManager: chest opened
+2017-02-01 09:54:36,111 INFOGF    BTLogManager: Deregistering call back
+2017-02-01 09:56:16,763 INFOGF    BTLogManager: Log System Initialized
+2017-02-01 09:56:16,806 WARN      BTLogManager: Unable to load Internationalized Strings from D:\Bally\Common\MediaAndGames\games\GameFramework\UserMessages\.
+2017-02-01 09:56:16,808 INFOGF    BTLogManager: User Message Language Set To English (United States)/en-US
+2017-02-01 09:56:16,810 WARN      BTLogManager: User Message Language Switched but no literal mapping available
+2017-02-01 09:56:16,811 INFOGF    BTLogManager: Loading default embedded en-US culture
+2017-02-01 09:56:16,835 WARN      BTLogManager: Unable to load Internationalized Strings from F:/Unity Projects/Rohan RnD/Pirates3D/Build/PiratesGold/PiratesGold_Data/StreamingAssets/Strings/.
+2017-02-01 09:56:16,837 INFOGF    BTLogManager: Language Set To English (United States)/en-US
+2017-02-01 09:56:16,838 WARN      BTLogManager: Language Switched but no literal mapping available
+2017-02-01 09:56:17,849 WARN      BTLogManager: Unable to connect to launcher:READY
+2017-02-01 09:56:38,963 INFO      BTLogManager: Boat selected : BlackPearl1
+2017-02-01 09:56:39,466 INFO      BTLogManager: Searching.............
+2017-02-01 09:56:41,465 INFO      BTLogManager: Canon Reached
+2017-02-01 09:56:54,445 INFO      BTLogManager: chest opened
+2017-02-01 09:57:06,373 INFOGF    BTLogManager: Deregistering call back

@@ -1,0 +1,33 @@
+2017-01-25 16:46:46,975 INFOGF    BTLogManager: Log System Initialized
+2017-01-25 16:46:47,048 WARN      BTLogManager: Unable to load Internationalized Strings from D:\Bally\Common\MediaAndGames\games\GameFramework\UserMessages\.
+2017-01-25 16:46:47,050 INFOGF    BTLogManager: User Message Language Set To English (United States)/en-US
+2017-01-25 16:46:47,051 WARN      BTLogManager: User Message Language Switched but no literal mapping available
+2017-01-25 16:46:47,053 INFOGF    BTLogManager: Loading default embedded en-US culture
+2017-01-25 16:46:47,077 WARN      BTLogManager: Unable to load Internationalized Strings from F:/Unity Projects/Rohan RnD/Pirates3D/Build/PiratesGold/PiratesGold_Data/StreamingAssets/Strings/.
+2017-01-25 16:46:47,080 INFOGF    BTLogManager: Language Set To English (United States)/en-US
+2017-01-25 16:46:47,080 WARN      BTLogManager: Language Switched but no literal mapping available
+2017-01-25 16:46:48,090 WARN      BTLogManager: Unable to connect to launcher:READY
+2017-01-25 16:47:11,440 INFO      BTLogManager: Searching.............
+2017-01-25 16:47:13,450 INFO      BTLogManager: Canon Reached
+2017-01-25 16:47:26,443 INFO      BTLogManager: chest opened
+2017-01-25 16:47:36,719 INFOGF    BTLogManager: Deregistering call back
+2017-01-25 17:11:04,505 INFOGF    BTLogManager: Log System Initialized
+2017-01-25 17:11:05,157 WARN      BTLogManager: Unable to load Internationalized Strings from D:\Bally\Common\MediaAndGames\games\GameFramework\UserMessages\.
+2017-01-25 17:11:05,162 INFOGF    BTLogManager: User Message Language Set To English (United States)/en-US
+2017-01-25 17:11:05,166 WARN      BTLogManager: User Message Language Switched but no literal mapping available
+2017-01-25 17:11:05,168 INFOGF    BTLogManager: Loading default embedded en-US culture
+2017-01-25 17:11:05,263 WARN      BTLogManager: Unable to load Internationalized Strings from F:/Unity Projects/Rohan RnD/Pirates3D/Build/PiratesGold/PiratesGold_Data/StreamingAssets/Strings/.
+2017-01-25 17:11:05,269 INFOGF    BTLogManager: Language Set To English (United States)/en-US
+2017-01-25 17:11:05,270 WARN      BTLogManager: Language Switched but no literal mapping available
+2017-01-25 17:11:06,290 WARN      BTLogManager: Unable to connect to launcher:READY
+2017-01-25 17:11:08,662 INFOGF    BTLogManager: Deregistering call back
+2017-01-25 17:42:23,113 INFOGF    BTLogManager: Log System Initialized
+2017-01-25 17:42:23,769 WARN      BTLogManager: Unable to load Internationalized Strings from D:\Bally\Common\MediaAndGames\games\GameFramework\UserMessages\.
+2017-01-25 17:42:23,774 INFOGF    BTLogManager: User Message Language Set To English (United States)/en-US
+2017-01-25 17:42:23,778 WARN      BTLogManager: User Message Language Switched but no literal mapping available
+2017-01-25 17:42:23,781 INFOGF    BTLogManager: Loading default embedded en-US culture
+2017-01-25 17:42:23,826 WARN      BTLogManager: Unable to load Internationalized Strings from F:/Unity Projects/Rohan RnD/Pirates3D/Build/PiratesGold/PiratesGold_Data/StreamingAssets/Strings/.
+2017-01-25 17:42:23,831 INFOGF    BTLogManager: Language Set To English (United States)/en-US
+2017-01-25 17:42:23,831 WARN      BTLogManager: Language Switched but no literal mapping available
+2017-01-25 17:42:24,858 WARN      BTLogManager: Unable to connect to launcher:READY
+2017-01-25 17:42:29,104 INFOGF    BTLogManager: Deregistering call back

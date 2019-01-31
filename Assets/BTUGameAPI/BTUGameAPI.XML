@@ -1,0 +1,3978 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BTUGameAPI</name>
+    </assembly>
+    <members>
+        <member name="T:BTActionProcessor">
+            <summary>
+            Class responsible for making actionURL calls or forwarding them to appropriate destinations.
+            </summary>
+        </member>
+        <member name="M:BTAssemblyLoader.LoadAssembly(System.String)">
+            <summary>
+            This function loads any embedded resource (dll) into memory.
+            </summary>
+            <param name="resource">eg: .Resources.log4net.dll</param>
+        </member>
+        <member name="T:BTCommunicationHandler">
+            <summary>
+            This class handles all the tcp/ip socket communication between the Game Manager and the Game.
+            </summary>
+        </member>
+        <member name="T:BTKissRand">
+            <summary>
+            Implementor of IRandomProvider for KissRandom
+            </summary>
+        </member>
+        <member name="T:IRandomProvider">
+            <remarks/>
+        </member>
+        <member name="M:IRandomProvider.Next">
+            <remarks/>
+        </member>
+        <member name="M:IRandomProvider.Next(System.UInt32)">
+            <remarks/>
+        </member>
+        <member name="M:IRandomProvider.Next(System.Int32)">
+            <remarks/>
+        </member>
+        <member name="M:IRandomProvider.NextDouble">
+            <remarks/>
+        </member>
+        <member name="M:BTKissRand.Next">
+            <remarks/>
+        </member>
+        <member name="M:BTKissRand.Next(System.UInt32)">
+            <remarks/>
+        </member>
+        <member name="M:BTKissRand.Next(System.Int32)">
+            <remarks/>
+        </member>
+        <member name="M:BTKissRand.NextDouble">
+            <remarks/>
+        </member>
+        <member name="T:BTLog">
+            <summary>
+            Wrapper for Unity Engine Logger class.
+            Will enable html logging in future.
+            </summary>
+        </member>
+        <member name="M:BTLog.#ctor">
+            <remarks/>
+        </member>
+        <member name="M:BTLog.Break">
+            <remarks/>
+        </member>
+        <member name="M:BTLog.ClearDeveloperConsole">
+            <remarks/>
+        </member>
+        <member name="M:BTLog.DebugBreak">
+            <remarks/>
+        </member>
+        <member name="M:BTLog.DrawLine(UnityEngine.Vector3,UnityEngine.Vector3)">
+            <remarks/>
+        </member>
+        <member name="M:BTLog.DrawLine(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.Color)">
+            <remarks/>
+        </member>
+        <member name="M:BTLog.DrawLine(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.Color,System.Single)">
+            <remarks/>
+        </member>
+        <member name="M:BTLog.DrawLine(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.Color,System.Single,System.Boolean)">
+            <remarks/>
+        </member>
+        <member name="M:BTLog.DrawRay(UnityEngine.Vector3,UnityEngine.Vector3)">
+            <remarks/>
+        </member>
+        <member name="M:BTLog.DrawRay(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.Color)">
+            <remarks/>
+        </member>
+        <member name="M:BTLog.DrawRay(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.Color,System.Single)">
+            <remarks/>
+        </member>
+        <member name="M:BTLog.DrawRay(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.Color,System.Single,System.Boolean)">
+            <remarks/>
+        </member>
+        <member name="M:BTLog.Log(System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:BTLog.LogFormat(System.String,System.Object[])">
+            <remarks/>
+        </member>
+        <member name="M:BTLog.Log(System.Object,UnityEngine.Object)">
+            <remarks/>
+        </member>
+        <member name="M:BTLog.LogFormat(System.String,UnityEngine.Object,System.Object[])">
+            <remarks/>
+        </member>
+        <member name="M:BTLog.LogError(System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:BTLog.LogErrorFormat(System.String,System.Object[])">
+            <remarks/>
+        </member>
+        <member name="M:BTLog.LogError(System.Object,UnityEngine.Object)">
+            <remarks/>
+        </member>
+        <member name="M:BTLog.LogException(System.Exception)">
+            <remarks/>
+        </member>
+        <member name="M:BTLog.LogException(System.Exception,UnityEngine.Object)">
+            <remarks/>
+        </member>
+        <member name="M:BTLog.LogWarning(System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:BTLog.LogWarning(System.Object,UnityEngine.Object)">
+            <remarks/>
+        </member>
+        <member name="M:BTLog.LogDebug(System.Object)">
+            <summary>
+            Logs messages only if Log4Net level is BTLog.
+            </summary>
+            <param name="message">message</param>
+        </member>
+        <member name="M:BTLog.LogDebug(System.Object,System.Exception)">
+            <summary>
+            Logs messages only if Log4Net level is BTLog.
+            </summary>
+            <param name="message">message</param>
+            <param name="exception">exception</param>
+        </member>
+        <member name="M:BTLog.LogDebugFormat(System.String,System.Object[])">
+            <summary>
+            Logs messages only if Log4Net level is BTLog. 
+            Accepts a string format with arguments.
+            </summary>
+            <param name="format">format</param>
+            <param name="args">arguments</param>
+        </member>
+        <member name="M:BTLog.DebugGF(System.Object)">
+            <summary>
+            Logs messages only if Log4Net level is GAMEAPIBTLog.
+            </summary>
+            <param name="message">message</param>
+        </member>
+        <member name="M:BTLog.DebugGF(System.Object,System.Exception)">
+            <summary>
+            Logs messages only if Log4Net level is GAMEAPIBTLog.
+            </summary>
+            <param name="message">message</param>
+            <param name="exception">exception</param>
+        </member>
+        <member name="M:BTLog.DebugFormatGF(System.String,System.Object[])">
+            <summary>
+            Logs messages only if Log4Net level is GAMEAPIBTLog. 
+            Accepts a string format with arguments.
+            </summary>
+            <param name="format">format</param>
+            <param name="args">arguments</param>
+        </member>
+        <member name="M:BTLog.LogGF(System.Object)">
+            <summary>
+            Logs messages only if Log4Net level is GAMEAPIINFO.
+            </summary>
+            <param name="message">message</param>
+        </member>
+        <member name="M:BTLog.LogGF(System.Object,System.Exception)">
+            <summary>
+            Logs messages only if Log4Net level is GAMEAPIINFO.
+            </summary>
+            <param name="message">message</param>
+            <param name="exception">exception</param>
+        </member>
+        <member name="M:BTLog.LogFormatGF(System.String,System.Object[])">
+            <summary>
+            Logs messages only if Log4Net level is GAMEAPIINFO. 
+            Accepts a string format with arguments.
+            </summary>
+            <param name="format">format</param>
+            <param name="args">arguments</param>
+        </member>
+        <member name="P:BTLog.developerConsoleVisible">
+            <remarks/>
+        </member>
+        <member name="P:BTLog.isDebugBuild">
+            <remarks/>
+        </member>
+        <member name="T:BTDisplayDataProcessor">
+            <summary>
+            This class will handle the extraction of Display Data buckets and process the same.
+            It will also retain a copy of the last received bucket stream if the game wants to do some additional logic.
+            </summary>
+        </member>
+        <member name="T:BTRect">
+            <summary>
+            BTRect custom rectangle struct
+            </summary>
+        </member>
+        <member name="F:BTRect.x">
+            <summary>
+            horizontal starting position
+            </summary>
+        </member>
+        <member name="F:BTRect.y">
+            <summary>
+            vertical starting position
+            </summary>
+        </member>
+        <member name="F:BTRect.width">
+            <summary>
+            width of the rectangle
+            </summary>
+        </member>
+        <member name="F:BTRect.height">
+            <summary>
+            height of the rectangle
+            </summary>
+        </member>
+        <member name="M:BTRect.#ctor(System.UInt16,System.UInt16,System.UInt16,System.UInt16)">
+            <summary>
+            Constructor for initalizing the BTRect structure.
+            </summary>
+            <param name="x">horizontal starting position</param>
+            <param name="y">vertical starting position</param>
+            <param name="width">width of the rectangle</param>
+            <param name="height">height of the rectangle</param>
+        </member>
+        <member name="M:BTRect.isZero">
+            <summary>
+            Method to confirm if this is a rectangle of size/area/perimeter 0
+            </summary>
+            <returns>bool</returns>
+        </member>
+        <member name="M:BTRect.print">
+            <summary>
+            Method to do a formatted print of the Rect structure for debugging purposes.
+            </summary>
+        </member>
+        <member name="T:Game">
+            <summary>
+            Game class to hold the game specific information.
+            </summary>
+        </member>
+        <member name="M:Game.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="F:Game.appType">
+            <summary>
+            App type of this game defined by AppType (eg: tournaments, uSpin)
+            </summary>
+        </member>
+        <member name="F:Game.themeName">
+            <summary>
+            Theme name of this game (eg: Prospectors Plunge, Spin2Win3D)
+            </summary>
+        </member>
+        <member name="F:Game.gameLocation">
+            <summary>
+            Game Location (Absolute path of the game executable to be launched)
+            </summary>
+        </member>
+        <member name="F:Game.dmRect">
+            <summary>
+            Rectangle of type BTRect defining where the game shows up on the DM
+            </summary>
+        </member>
+        <member name="F:Game.v32Rect">
+            <summary>
+            Rectangle of type BTrect defining where the game shows up the v32 display through the DM.
+            </summary>
+        </member>
+        <member name="F:Game.primaryDisplayRect">
+            <summary>
+            Primary display rectangle defining the portion of the game showing through the DM. (not for v32 version).
+            </summary>
+        </member>
+        <member name="F:Game.AdditionalArguments">
+            <summary>
+            Additional arguments to be passed to the game at the time of launch.
+            </summary>
+        </member>
+        <member name="F:Game.dmScale">
+            <summary>
+            Rectangle Defining Custom Scaling of the base game through the DM.
+            </summary>
+        </member>
+        <member name="F:Game.dmWideScreen">
+            <summary>
+            Rectangle Defining Custom Scaling of the base game through the DM for wide screen.
+            </summary>
+        </member>
+        <member name="F:Game.dmV32">
+            <summary>
+            Rectangle Defining Custom Scaling of the base game through the DM for V32.
+            </summary>
+        </member>
+        <member name="F:Game.socialSharingWindow">
+            <summary>
+            Rectangle Defining where the social sharing window shows up on the DM.
+            </summary>
+        </member>
+        <member name="T:Games">
+            <summary>
+            Games class that holds a list of all iVIEW DM games as defined in Games.xml
+            </summary>
+        </member>
+        <member name="F:Games.games">
+            <summary>
+            Game array that holds a list of all iVIEW DM games as defined in Games.xml
+            </summary>
+        </member>
+        <member name="T:BTGlobalGameBehaviour">
+            <summary>
+            This class is responsible for making decisions on behalf of the game based on App Type, for parsing and populating required
+            data buckets and firing some automated requests.
+            </summary>
+        </member>
+        <member name="M:BTGlobalGameBehaviour.Awake">
+            <summary>
+            Overridden Unity Awake
+            </summary>
+        </member>
+        <member name="M:BTGlobalGameBehaviour.Start">
+            <summary>
+            Overridden Unity Start
+            </summary>
+        </member>
+        <member name="M:BTGlobalGameBehaviour.Update">
+            <summary>
+            Overridden Unity Update
+            </summary>
+        </member>
+        <member name="T:BTLeaderboardEntity">
+            <summary>
+            Common Leaderboard Entity representing the data from each individual entry of a leaderboard.
+            Reused between in-game and post-game leaderboard.
+            </summary>
+        </member>
+        <member name="F:BTLeaderboardEntity.cardNumber">
+            <summary>
+            Player card number
+            </summary>
+        </member>
+        <member name="F:BTLeaderboardEntity.firstName">
+            <summary>
+            Player first name
+            </summary>
+        </member>
+        <member name="F:BTLeaderboardEntity.lastName">
+            <summary>
+            Player last name
+            </summary>
+        </member>
+        <member name="F:BTLeaderboardEntity.score">
+            <summary>
+            Player score
+            </summary>
+        </member>
+        <member name="F:BTLeaderboardEntity.currentPlayer">
+            <summary>
+            Bool indicating if this entry is for the current player
+            </summary>
+        </member>
+        <member name="F:BTLeaderboardEntity.prize">
+            <summary>
+            Prize awarded to this player : Post game leaderboard only
+            </summary>
+        </member>
+        <member name="F:BTLeaderboardEntity.tournamentRank">
+            <summary>
+            Current/Final rank of this player.
+            </summary>
+        </member>
+        <member name="F:BTLeaderboardEntity.assetId">
+            <summary>
+            Asset Id on which this entry was generated : In game leaderboard only.
+            </summary>
+        </member>
+        <member name="M:BTLeaderboardEntity.#ctor(System.String,System.String,System.String,System.String,System.UInt32,System.UInt32,System.String)">
+            <summary>
+            Public constructor for BTLeadeboardEntity for ease of initialization.
+            </summary>
+            <param name="assetId">Asset Id on which this entry was generated : In game leaderboard only.</param>
+            <param name="cardNumber">Player card number</param>
+            <param name="firstName">Player first name</param>
+            <param name="lastName">Player last name</param>
+            <param name="tournamentRank">Current/Final rank of this player.</param>
+            <param name="score">Player score</param>
+            <param name="prize">Prize awarded to this player : Post game leaderboard only</param>
+        </member>
+        <member name="T:BTLocaleManager">
+            <summary>
+            Class responsible for managing Language and Currency settings.
+            </summary>
+        </member>
+        <member name="M:BTLocaleManager.Awake">
+            <summary>
+            Overridden Unity Awake
+            </summary>
+        </member>
+        <member name="M:BTLocaleManager.Start">
+            <summary>
+            Overridden Unity Start
+            </summary>
+        </member>
+        <member name="T:BTLogManager">
+            <summary>
+            Log Manager class that automatically handles logging for all games on the iVIEW.
+            </summary>
+        </member>
+        <member name="T:BTMachineInfo">
+            <summary>
+            Information pertaining to the iVIEW and EGM
+            </summary>
+        </member>
+        <member name="P:BTMachineInfo.IsEgmInitialized">
+            <summary>
+            Returns a bool indicating if the EGM (base game) is Initialized.
+            </summary>
+        </member>
+        <member name="P:BTMachineInfo.AssetId">
+            <summary>
+            Returns the unique Asset ID of the EGM (base game)
+            </summary>
+        </member>
+        <member name="P:BTMachineInfo.IsWideScreen">
+            <summary>
+            Returns a bool indicating if the iVIEW-DM is connected to a 16:9 aspect ratio EGM Display.
+            </summary>
+        </member>
+        <member name="P:BTMachineInfo.BaseGamePayTableId">
+            <summary>
+            Returns the Base Game Pay Table Id. (eg: Blazin7)
+            </summary>
+        </member>
+        <member name="P:BTMachineInfo.TotalGamesPlayed">
+            <summary>
+            Returns the total number of games played on the EGM.
+            </summary>
+        </member>
+        <member name="P:BTMachineInfo.BaseGamePayBackPercent">
+            <summary>
+            Returns payback percent of the base game. (eg: 90.15)
+            </summary>
+        </member>
+        <member name="P:BTMachineInfo.BaseGameDenomination">
+            <summary>
+            Returns base denomination of the base game. (eg: 0.01)
+            </summary>
+        </member>
+        <member name="P:BTMachineInfo.BaseGameMaxBet">
+            <summary>
+            Returns max bet possible on the base game. (eg: noOfLines*betPerLine=20*3=60)
+            </summary>
+        </member>
+        <member name="P:BTMachineInfo.TotalCoinIn">
+            <summary>
+            Returns the total coin in on the base game.
+            </summary>
+        </member>
+        <member name="P:BTMachineInfo.TotalCoinOut">
+            <summary>
+            Returns the total coin out on the base game.
+            </summary>
+        </member>
+        <member name="P:BTMachineInfo.iVIEWIPAddress">
+            <summary>
+            Returns the IP Address of the iVIEW (eg: 127.0.0.1)
+            </summary>
+        </member>
+        <member name="P:BTMachineInfo.HardWarePlatform">
+            <summary>
+            Returns the target hardware on which the game is being run.
+            </summary>
+        </member>
+        <member name="T:BTPlayerInfo">
+            <summary>
+            Class mapping to vital player information useful during gameplay and logging.
+            </summary>
+        </member>
+        <member name="P:BTPlayerInfo.BirthDate">
+            <summary>
+            Player Date of Birth eg:1/1/0001 12:00:00 AM
+            </summary>
+        </member>
+        <member name="P:BTPlayerInfo.FirstName">
+            <summary>
+            Player first name.
+            </summary>
+        </member>
+        <member name="P:BTPlayerInfo.LastName">
+            <summary>
+            Player last name.
+            </summary>
+        </member>
+        <member name="P:BTPlayerInfo.PlayerId">
+            <summary>
+            Player card number.
+            </summary>
+        </member>
+        <member name="P:BTPlayerInfo.SessionState">
+            <summary>
+            Current session status of the player.
+            </summary>
+        </member>
+        <member name="P:BTPlayerInfo.IsCardlessPlay">
+            <summary>
+            Is the player cardless?
+            </summary>
+        </member>
+        <member name="T:BTPromotionSettings">
+            <summary>
+            Class mapping for generic promotion specific settings as configured on EBS.
+            </summary>
+        </member>
+        <member name="F:BTPromotionSettings.displayName">
+            <summary>
+            profile_displayName
+            Display Name of the promotion as seen by the User on EBS. Can be showed on the game based on design. eg: Mohegun Sun Tournament
+            </summary>
+        </member>
+        <member name="F:BTPromotionSettings.startMode">
+            <summary>
+            profile_startSource
+            Start Mode for the game - player or server start.
+            </summary>
+        </member>
+        <member name="F:BTPromotionSettings.themeName">
+            <summary>
+            Unique themeName used to identify the game type under a specific app type. eg: Spin2Win
+            </summary>
+        </member>
+        <member name="F:BTPromotionSettings.maximumMultiplier">
+            <summary>
+            Maximum Multiplier by which the game outcome(score) should be multiplied.
+            </summary>
+        </member>
+        <member name="F:BTPromotionSettings.textMessage">
+            <summary>
+            Text Message for promotions that are purely driven by a message string. current examples: Flex Rewards, Power Winners.
+            </summary>
+        </member>
+        <member name="F:BTPromotionSettings.messageKind">
+            <summary>
+            Message Kind for promotions that are purely driven by a message string. current examples: Flex Rewards, Power Winners.
+            </summary>
+        </member>
+        <member name="M:BTPromotionSettings.getAward">
+            <summary>
+            This function will return all the win amounts for this promotion as an array of raw floating point values. Array size could be 1 for promotions like uSpin
+            and it could be 4 for promotions like HiLo.
+            </summary>
+            <returns>Returns a float point array of Win Amounts.</returns>
+        </member>
+        <member name="M:BTPromotionSettings.getAwardDblToDec">
+            <remarks/>
+        </member>
+        <member name="F:BTPromotionSettings.awardFormat">
+            <summary>
+            The culture variant string format to be applied to the award.
+            </summary>
+        </member>
+        <member name="M:BTPromotionSettings.getAwardFormat">
+            <summary>
+            The culture variant string format to be applied to the award.
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:BTPromotionSettings.getAwardType">
+            <summary>
+            The culture variant string format to be applied to the award.
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="F:BTPromotionSettings.formattedAward">
+            <summary>
+            The award formatted as per the given string format and culture variant.
+            </summary>
+        </member>
+        <member name="M:BTPromotionSettings.getFormattedAward">
+            <summary>
+            Returns the award with the required Formatting Applied.
+            </summary>
+            <returns>formatted string</returns>
+        </member>
+        <member name="M:BTPromotionSettings.getFormattedAwardDbl">
+            <remarks/>
+        </member>
+        <member name="F:BTPromotionSettings.payLine">
+            <summary>
+            Indicates the winning Payline number eg: 167
+            </summary>
+        </member>
+        <member name="F:BTPromotionSettings.payMethod">
+            <summary>
+            Indicates Payment Method.
+            </summary>
+        </member>
+        <member name="F:BTPromotionSettings.celebrationLevel">
+            <summary>
+            The Celebration level for this particular win. It is upto each game to define its implementation based on the values.
+            </summary>
+        </member>
+        <member name="F:BTPromotionSettings.displayText">
+            <summary>
+            The display text (if any) to be shown to the user at the end of the game play. eg:Congratulations! You won $1.00
+            </summary>
+        </member>
+        <member name="F:BTPromotionSettings.themeSettings">
+            <summary>
+            Additional promotion settings for Tournament Games.
+            </summary>
+        </member>
+        <member name="F:BTPromotionSettings.results">
+            <summary>
+            Get Promotion Results: - applicable for applications like Monopoly
+            </summary>
+        </member>
+        <member name="F:BTPromotionSettings.winningPayLine">
+            <summary>
+            The winning PayLine stored as a PayLine object.
+            </summary>
+        </member>
+        <member name="M:BTPromotionSettings.getWinningPayLine">
+            <summary>
+            Returns the winning payline as a PayLine object as opposed to just the integer.
+            </summary>
+            <returns>PayLine</returns>
+        </member>
+        <member name="P:BTPromotionSettings.DisplayName">
+            <summary>
+            profile_displayName
+            Get the display name of the promotion as seen by the User on EBS. Can be showed on the game based on design. eg: Mohegun Sun Tournament
+            </summary>
+        </member>
+        <member name="P:BTPromotionSettings.StartMode">
+            <summary>
+            profile_startSource
+            Get the Start Mode for the game - player or server start.
+            </summary>
+        </member>
+        <member name="P:BTPromotionSettings.ThemeName">
+            <summary>
+            Get the unique theme name used to identify the game type under a specific app type. eg: Spin2Win
+            </summary>
+        </member>
+        <member name="P:BTPromotionSettings.MaximumMultiplier">
+            <summary>
+            Get the maximum multiplier by which the game outcome(score) should be multiplied.
+            </summary>
+        </member>
+        <member name="P:BTPromotionSettings.TextMessage">
+            <summary>
+            Get the win message for promotions that are purely driven by a message string. current examples: Flex Rewards, Power Winners.
+            </summary>
+        </member>
+        <member name="P:BTPromotionSettings.MessageKind">
+            <summary>
+            Get the message kind for promotions that are purely driven by a message string. current examples: LMB, DRB.
+            </summary>
+        </member>
+        <member name="P:BTPromotionSettings.PayLine">
+            <summary>
+            Gets the winning Payline number eg: 167
+            </summary>
+        </member>
+        <member name="P:BTPromotionSettings.PayMethod">
+            <summary>
+            Gets the PayMethod type eg: handpay
+            In case of a Lotto promption. If there are multiple winning Tickets and while most tickets may pay the wallet and a few to handpay, 
+            the overriding paymethod shall be handpay and that shall be set here.
+            </summary>
+        </member>
+        <member name="P:BTPromotionSettings.CelebrationLevel">
+            <summary>
+            Get the celebration level for this particular win. It is upto each game to define its implementation based on the values.
+            </summary>
+        </member>
+        <member name="P:BTPromotionSettings.DisplayText">
+            <summary>
+            Get the display text (if any) to be shown to the user at the end of the game play. eg:Congratulations! You won $1.00
+            </summary>
+        </member>
+        <member name="P:BTPromotionSettings.TournamentSettings">
+            <summary>
+            Get additional promotion settings for Tournament Games.
+            </summary>
+        </member>
+        <member name="P:BTPromotionSettings.MonopolyResults">
+            <summary>
+            Get Promotion Results: - applicable for applications like Monopoly (when MonopolyResultsPresentingState == resultsReceived)
+            </summary>
+        </member>
+        <member name="P:BTPromotionSettings.LottoSettings">
+            <summary>
+            Get additional promotion settings for Lotto Games.
+            </summary>
+        </member>
+        <member name="P:BTPromotionSettings.MonopolySettings">
+            <summary>
+            Get additional promotion settings for Monopoly Games.
+            </summary>
+        </member>
+        <member name="P:BTPromotionSettings.PayTable">
+            <summary>
+            Get additional promotion settings for games that require a PayTable eg: uSpin
+            </summary>
+        </member>
+        <member name="P:BTPromotionSettings.CostPerTicket">
+            <summary>
+            The Cost per each Ticket purchase in a Lotto Promotion.
+            </summary>
+        </member>
+        <member name="P:BTPromotionSettings.CostPerTicketDblToDec">
+            <remarks/>
+        </member>
+        <member name="P:BTPromotionSettings.FormattedCostPerTicket">
+            <summary>
+            The Formatted Cost per each Ticket purchase in a Lotto Promotion.
+            </summary>
+        </member>
+        <member name="P:BTPromotionSettings.FormattedCostPerTicketDbl">
+            <summary>
+            The Formatted Cost per each Ticket purchase in a Lotto Promotion.
+            </summary>
+        </member>
+        <member name="P:BTPromotionSettings.CountdownDurationInSeconds">
+            <summary>
+            Duration of the last Call / countdown before purchasing is locked. ClassicLottoState -> locked
+            </summary>
+        </member>
+        <member name="P:BTPromotionSettings.CountdownReceivedAt">
+            <summary>
+            Time Stamp when the CountdownDurationInSeconds was received by the iVIEW from EBS.
+            </summary>
+        </member>
+        <member name="P:BTPromotionSettings.ShowStartTime">
+            <summary>
+            Time Stamp indicating the start time for the drawing.
+            </summary>
+        </member>
+        <member name="P:BTPromotionSettings.DrawStartTime">
+            <summary>
+            The estimated start time for the Drawing (only for display purposes).
+            Use ShowStartTime for actual show when classicLottoState is showResults.
+            </summary>
+        </member>
+        <member name="P:BTPromotionSettings.IsActive">
+            <summary>
+            True if promotion is not Deactivated and Disabled by Host(EBS).
+            </summary>
+        </member>
+        <member name="T:BTRandom">
+            <summary>
+            Class that provides access to random number functions using GLI approved techniques.
+            </summary>
+        </member>
+        <member name="M:BTRandom.Next">
+            <summary>
+            Returns a nonnegative random number.
+            </summary>
+            <returns>unsigned int</returns>
+        </member>
+        <member name="M:BTRandom.Next(System.UInt32)">
+            <summary>
+            Returns a nonnegative random number less than the specified maximum.
+            </summary>
+            <param name="upperBound">exclusive upper bound</param>
+            <returns>unsigned int</returns>
+        </member>
+        <member name="M:BTRandom.Next(System.Int32,System.Int32)">
+            <summary>
+            Returns a random number within a specified range.(can be non negative)
+            lowerbound must be less than upperbound. Otherwise return value will be lowerbound.
+            </summary>
+            <param name="lowerbound">inclusive lower bound</param>
+            <param name="upperbound">exclusive upper bound</param>
+            <returns></returns>
+        </member>
+        <member name="M:BTRandom.NextDouble">
+            <summary>
+            Returns a random number between 0.0 and 1.0.
+            </summary>
+            <returns>double</returns>
+        </member>
+        <member name="T:BTStream">
+            <summary>
+            A helper class with a single method to load a file stream into a byte array that can be used as a Texture2D object in Unity.
+            </summary>
+        </member>
+        <member name="M:BTStream.ReadToEnd(System.IO.Stream)">
+            <summary>
+            Reads a Stream from start to end into a byte array.
+            </summary>
+            <param name="stream">Data Stream from a resource file (eg: image file)</param>
+            <returns>A Byte array</returns>
+        </member>
+        <member name="T:BTStringConstants">
+            <summary>
+            For all the string constants used throughout the API.
+            </summary>
+        </member>
+        <member name="T:BTSysRandom">
+            <summary>
+            Implementation of KissRNG.
+            </summary>
+        </member>
+        <member name="M:BTSysRandom.#ctor">
+            <remarks/>
+        </member>
+        <member name="M:BTSysRandom.#ctor(System.UInt32)">
+            <remarks/>
+        </member>
+        <member name="M:BTSysRandom.#ctor(System.UInt32,System.UInt32,System.UInt32,System.UInt32)">
+            <remarks/>
+        </member>
+        <member name="M:BTSysRandom.Reseed(System.UInt32)">
+            <remarks/>
+        </member>
+        <member name="M:BTSysRandom.Reseed(System.UInt32,System.UInt32,System.UInt32,System.UInt32)">
+            <remarks/>
+        </member>
+        <member name="M:BTSysRandom.Next">
+            <remarks/>
+        </member>
+        <member name="M:BTSysRandom.Next(System.UInt32)">
+            <summary>
+            Returns an integer from 0 to upperBound - 1 inclusive.
+            </summary>
+            <param name="upperBound">One more than the maximum permitted return value.</param>
+            <returns>A random integer.</returns>
+        </member>
+        <member name="M:BTSysRandom.Next(System.Int32)">
+            <summary>
+            Returns an integer from 0 to upperBound - 1 inclusive.
+            </summary>
+            <param name="upperBound">One more than the maximum permitted return value.</param>
+            <returns>A random integer.</returns>
+        </member>
+        <member name="M:BTSysRandom.NextDouble">
+            <remarks/>
+        </member>
+        <member name="M:BTExtensions.Invoke(System.Object,System.Threading.TimerCallback,System.Int32)">
+            <summary>
+            Invoke will start a parallel thread of execution with a given delay.
+            </summary>
+            <param name="game">Extension Type Game.</param>
+            <param name="method">The method to be invoked in a parallel thread.</param>
+            <param name="delay">in milliseconds 1 sec = 1000 ms</param>
+        </member>
+        <member name="M:BTExtensions.SetIff(System.Collections.Generic.Dictionary{System.String,System.String},System.String,System.String@)">
+            <summary>
+            Assigns data to the Value reference if and only if there is data present.
+            </summary>
+            <param name="dictionary"></param>
+            <param name="key"></param>
+            <param name="value"></param>
+        </member>
+        <member name="T:BTExtensionsPublic">
+            <summary>
+            Public GameFramework Extensions
+            </summary>
+        </member>
+        <member name="M:BTExtensionsPublic.ObjectToXml``1(``0)">
+            <summary>
+            Returns a serialized XML string of the object data WITHOUT xml header and namespace.
+            
+            http://stackoverflow.com/questions/1772004/how-can-i-make-the-xmlserializer-only-serialize-plain-xml/1772182#1772182
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="toSerialize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BTExtensionsPublic.XMLToObject``1(System.String)">
+            <summary>
+            Helper method to deserialize an xml to an object.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="xml"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BTExtensionsPublic.Clone``1(``0)">
+            <summary>
+            Deep Clones a serializable object.
+            </summary>
+            <typeparam name="T">Serializable source class</typeparam>
+            <param name="source">Any serializable source</param>
+            <returns></returns>
+        </member>
+        <member name="T:StateObserver`1">
+            <summary>
+            Callback for State Changes
+            </summary>
+        </member>
+        <member name="T:CaptureComplete">
+            <summary>
+            Callback to be invoked on completion of a screenshot.
+            </summary>
+        </member>
+        <member name="T:OnEvent">
+            <summary>
+            Callback to be invoked on the occurence of an event as defined in BTEventType enum.
+            </summary>
+            <param name="eventType">BTEventType eventType</param>
+            <param name="result">bool result</param>
+        </member>
+        <member name="T:OnDialogClose">
+            <summary>
+            Callback to be invoked when the currently rendered modal dialog closes.
+            </summary>
+            <param name="result">bool result (always true for DialogType.Error,Info and Alert. true if yes for Confirm, and false if no for Confirm</param>
+        </member>
+        <member name="T:OnLeaderboardUpdate">
+            <summary>
+            Callback to be invoked on a leadeboard Update.
+            </summary>
+            <param name="leaderboard">Leadeboard data to be sent back. Can be null indicating only a rank is available.</param>
+            <param name="final">bool to indicate if it is in-game or final leaderboad.</param>
+            <param name="playerCurrentRank">Current Rank of the player for the current entry. A value of 0 indicates rank currently unavailable, so don't render it.</param>
+            <param name="playerBestRank">Best Rank of the player in multiple entries (only available when final is true). A value of 0 indicates rank currently unavailable, so don't render it.</param>
+            <param name="playerBestScore">Best Score of the player in multiple entries (only available when final is true).</param>
+        </member>
+        <member name="T:OnTicketsAvailable">
+            <summary>
+            Callback to be invoked on a prepurchased Tickets available and/or when new tickets are returned with an ID
+            </summary>
+            <param name="tickets">Tickets</param>
+        </member>
+        <member name="T:OnPurchasesAvailable">
+            <summary>
+            Callback to be invoked on a prepurchased Tiles available and/or when new tickets are returned with an updated Dev Level
+            </summary>
+            <param name="board">Board</param>
+        </member>
+        <member name="T:OnWinningTicketAvailable">
+            <summary>
+            Callback to be invoked when the Lotto Drawing Result (winning ticket) is available.
+            </summary>
+            <param name="winningTicket">Ticket</param>
+            <param name="finalPayLevels">PayLevelValues</param>
+        </member>
+        <member name="T:OnIndividualResultAvailable">
+            <summary>
+            Callback to be invoked when the Individual Win Results are available. (if player card is present at the time of show).
+            </summary>
+            <param name="drawingResult">DrawingResult</param>
+        </member>
+        <member name="T:OnWalletBalanceUpdate">
+            <summary>
+            Callback to notify the game when the Wallet Balance changes.
+            </summary>
+            <param name="totalBalance"></param>
+        </member>
+        <member name="T:OnWalletUpdate">
+            <summary>
+            Callback to notify the game when there is any change to the Wallet.
+            </summary>
+            <param name="totalBet">Total Bet Amount</param>
+            <param name="totalBalance">Total Balance</param>
+        </member>
+        <member name="T:OnPayLevelUpdate">
+            <summary>
+            Callback to be invoked on the availability of a PayLevel Update.
+            </summary>
+            <param name="payLevelValues">PayLevelValues</param>
+        </member>
+        <member name="T:BTUGameAPI">
+            <summary>
+            This is the entry class for the Bally Technologies Unity Game API. The methods from this class are the most used by any Game.
+            </summary>
+        </member>
+        <member name="M:BTUGameAPI.#cctor">
+            <summary>
+            static constructor that takes care of initialization.
+            </summary>
+        </member>
+        <member name="M:BTUGameAPI.Initialize">
+            <summary>
+            This is the first method to be called in the API Initialization process. Include this call as the first step in
+            an Awake function of the game's first executing script.
+            </summary>
+            
+        </member>
+        <member name="M:BTUGameAPI.Initialize(System.Single)">
+            <summary>
+            Set a delay in seconds after which the Game Framework 
+            will start processing and dispatching data to your Game
+            Usually the seconds will be the load time of your Main Game Scene.
+            </summary>
+            <param name="dataDispatchDelay">float</param>
+            <remarks>
+            <see cref="M:BTUGameAPI.CancelDispatchDelay"/>
+            </remarks>
+        </member>
+        <member name="M:BTUGameAPI.CancelDispatchDelay">
+            <summary>
+            To Immediately dispatch any queued up data to the game.
+            If you game has loaded faster that the anticipated delay.
+            </summary>
+        </member>
+        <member name="M:BTUGameAPI.HasErrorOccured">
+            <summary>
+            Returns a bool indicating if there if the API is aware of any critical/fatal error that requires the game to pause.
+            </summary>
+            <returns>true if the API has detected an error state or if the game has requested a Error Dialog. false otherwise.</returns>
+        </member>
+        <member name="M:BTUGameAPI.CaptureScreenshot">
+            <summary>
+            Use this function to generate the screenshot of the game. 
+            Based on V32/LVDS/DM it can automatically figure out the current co-ordinates for the screencap.
+            Use CaptureScreenshot(x,y,width,height) if you want to use custom co-ordinates.
+            </summary>
+        </member>
+        <member name="M:BTUGameAPI.CaptureScreenshot(System.UInt16,System.UInt16,System.UInt16,System.UInt16)">
+            <summary>
+            Use this function to generate the screenshot of the game with custom co-ordinates.
+            </summary>
+            <param name="x">Starting X Coordinate of the Rectangle</param>
+            <param name="y">Starting Y Coordinate of the Rectangle</param>
+            <param name="width">Width of the Rectangle</param>
+            <param name="height">Height of the Rectangle</param>
+        </member>
+        <member name="M:BTUGameAPI.CaptureScreenshot(CaptureComplete)">
+            <summary>
+            Use this function to generate the screenshot of the game. 
+            Based on V32/LVDS/DM it can automatically figure out the current co-ordinates for the screencap.
+            </summary>
+            <param name="callBack">A Callback of the type CaptureComplete to be invoked when the threaded Screenshot routine completes.</param>
+        </member>
+        <member name="M:BTUGameAPI.CaptureScreenshot(System.UInt16,System.UInt16,System.UInt16,System.UInt16,CaptureComplete)">
+            <summary>
+            Use this function to generate the screenshot of the game with custom co-ordinates.
+            </summary>
+            <param name="x">Starting X Coordinate of the Rectangle</param>
+            <param name="y">Starting Y Coordinate of the Rectangle</param>
+            <param name="width">Width of the Rectangle</param>
+            <param name="height">Height of the Rectangle</param>
+            <param name="callBack">A Callback of the type CaptureComplete to be invoked when the threaded Screenshot routine completes.</param>
+        </member>
+        <member name="M:BTUGameAPI.ToggleRenderingStats(System.Boolean)">
+            <summary>
+            Toggles Rendering Stats as a display overlay on your game.
+            It shows counts of in-game object usages, textures, components etc
+            It also displays the FPS for the game.
+            </summary>
+            <param name="on">Use True to turn it on, False to switch it off</param>
+        </member>
+        <member name="M:BTUGameAPI.SetStateChangeCallBack(StateObserver{BonusGameState},ObservationType)">
+            <summary>
+            Sets a call back to be notified when the BonusGameState of the current bonus game in progress changes.
+            </summary>
+            <param name="bonusGameStateObserver">The observer method to be called upon a state change</param>
+            <param name="observationType">Based on a value from enum ObservationType eg:ObservationType.New</param>
+        </member>
+        <member name="M:BTUGameAPI.SetStateChangeCallBack(StateObserver{SessionState},ObservationType)">
+            <summary>
+            Sets a call back to be notified when the Session of the current player changes.
+            </summary>
+            <param name="sessionStateObserver">The observer method to be called upon a state change</param>
+            <param name="observationType">Based on a value from enum ObservationType eg:ObservationType.New</param>
+        </member>
+        <member name="M:BTUGameAPI.SetStateChangeCallBack(StateObserver{PlayerEligibilityState},ObservationType)">
+            <summary>
+            Sets a call back to be notified when the Eligibility of the current player changes.
+            </summary>
+            <param name="playerEligibilityStateObserver">Your observer method to be called upon a state change</param>
+            <param name="observationType">Based on a value from enum ObservationType eg:ObservationType.New</param>
+        </member>
+        <member name="M:BTUGameAPI.SetStateChangeCallBack(StateObserver{TournamentCodeValidationState},ObservationType)">
+            <summary>
+            Sets a call back to be notified when the Tournament Code Validation State of the current player changes.
+            </summary>
+            <param name="tournamentCodeValidationStateObserver">Your observer method to be called upon a state change</param>
+            <param name="observationType">Based on a value from enum ObservationType eg:ObservationType.New</param>
+        </member>
+        <member name="M:BTUGameAPI.SetStateChangeCallBack(StateObserver{MonopolyRoundState},ObservationType)">
+            <summary>
+            Sets a call back to be notified when the Monopoly Round State changes.
+            </summary>
+            <param name="monopolyRoundStateObserver">Your observer method to be called upon a state change</param>
+            <param name="observationType">Based on a value from enum ObservationType eg:ObservationType.New</param>
+        </member>
+        <member name="M:BTUGameAPI.SetStateChangeCallBack(StateObserver{MonopolyPurchaseState},ObservationType)">
+            <summary>
+            Sets a call back to be notified when the Monopoly Purchase State changes.
+            </summary>
+            <param name="monopolyPurchaseStateObserver">Your observer method to be called upon a state change</param>
+            <param name="observationType">Based on a value from enum ObservationType eg:ObservationType.New</param>
+        </member>
+        <member name="M:BTUGameAPI.SetStateChangeCallBack(StateObserver{MonopolyResultsPresentingState},ObservationType)">
+            <summary>
+            Sets a call back to be notified when the Monopoly Results Presenting State changes.
+            </summary>
+            <param name="monopolyResultsPresentingStateObserver">Your observer method to be called upon a state change</param>
+            <param name="observationType">Based on a value from enum ObservationType eg:ObservationType.New</param>
+        </member>
+        <member name="M:BTUGameAPI.SetStateChangeCallBack(StateObserver{MonopolyPurchaseRequestState},ObservationType)">
+            <summary>
+            Sets a call back to be notified when the Monopoly Purchase Request State changes.
+            </summary>
+            <param name="monopolyPurchaseRequestStateObserver">Your observer method to be called upon a state change</param>
+            <param name="observationType">Based on a value from enum ObservationType eg:ObservationType.New</param>
+        </member>
+        <member name="M:BTUGameAPI.SetStateChangeCallBack(StateObserver{LottoState},ObservationType)">
+            <summary>
+            Sets a call back to be notified when the Instant Lotto State changes.
+            </summary>
+            <param name="instantLottoStateObserver">Your observer method to be called upon a state change</param>
+            <param name="observationType">Based on a value from enum ObservationType eg:ObservationType.New</param>
+        </member>
+        <member name="M:BTUGameAPI.SetStateChangeCallBack(StateObserver{ClassicLottoState},ObservationType)">
+            <summary>
+            Sets a call back to be notified when the Classic Lotto State changes.
+            </summary>
+            <param name="classicLottoStateObserver">Your observer method to be called upon a state change</param>
+            <param name="observationType">Based on a value from enum ObservationType eg:ObservationType.New</param>
+        </member>
+        <member name="M:BTUGameAPI.SetStateChangeCallBack(StateObserver{TicketRequestState},ObservationType)">
+            <summary>
+            Sets a call back to be notified when the Ticket Request State changes.
+            </summary>
+            <param name="ticketRequestStateObserver">Your observer method to be called upon a state change</param>
+            <param name="observationType">Based on a value from enum ObservationType eg:ObservationType.New</param>
+        </member>
+        <member name="M:BTUGameAPI.SetStateChangeCallBack(StateObserver{TicketSelectionState},ObservationType)">
+            <summary>
+            Sets a call back to be notified when the Ticket Selection State changes.
+            </summary>
+            <param name="ticketSelectionStateObserver">Your observer method to be called upon a state change</param>
+            <param name="observationType">Based on a value from enum ObservationType eg:ObservationType.New</param>
+        </member>
+        <member name="M:BTUGameAPI.SetStateChangeCallBack(StateObserver{WinningsRequestState},ObservationType)">
+            <summary>
+            Sets a call back to be notified when the Winnings Request State changes.
+            </summary>
+            <param name="winningsRequestStateObserver">Your observer method to be called upon a state change</param>
+            <param name="observationType">Based on a value from enum ObservationType eg:ObservationType.New</param>
+        </member>
+        <member name="M:BTUGameAPI.SetStateChangeCallBack(StateObserver{DynamicRandomBonusState},ObservationType)">
+            <summary>
+            Sets a call back to be notified when the Dynamic Random Bonus State changes.
+            </summary>
+            <param name="dynamicRandomBonusStateObserver">Your observer method to be called upon a state change</param>
+            <param name="observationType">Based on a value from enum ObservationType eg:ObservationType.New</param>
+        </member>
+        <member name="M:BTUGameAPI.SetTicketsAvailableCallBack(OnTicketsAvailable)">
+            <summary>
+            Sets a call back to be notified whenever there is updated Ticket information available.
+            </summary>
+            <param name="onTicketsAvailable">OnTicketsAvailable</param>
+        </member>
+        <member name="M:BTUGameAPI.SetPurchasesAvailableCallBack(OnPurchasesAvailable)">
+            <summary>
+            Sets a call back to be notified whenever there is updated Purchase information available.
+            </summary>
+            <param name="onPurchasesAvailable">OnPurchasesAvailable</param>
+        </member>
+        <member name="M:BTUGameAPI.SetWalletBalanceUpdateCallBack(OnWalletBalanceUpdate)">
+            <summary>
+            Sets a call back to be notified whenever there is an updated Wallet Balance available.
+            </summary>
+            <param name="onWalletBalanceUpdate">OnWalletBalanceUpdate</param>
+        </member>
+        <member name="M:BTUGameAPI.SetWalletUpdateCallBack(OnWalletUpdate)">
+            <summary>
+            Sets a call back to be notified whenever there is an updated Wallet Balance and/or Total Bet available.
+            </summary>
+            <param name="onWalletUpdate">OnWalletUpdate</param>
+        </member>
+        <member name="M:BTUGameAPI.SetWinningTicketAvailableCallBack(OnWinningTicketAvailable)">
+            <summary>
+            Sets a call back to be notified when the winning ticket and final pay level are available.
+            </summary>
+            <param name="onDrawingResultAvailable">OnWinningTicketAvailable</param>
+        </member>
+        <member name="M:BTUGameAPI.SetIndividualResultAvailableCallBack(OnIndividualResultAvailable)">
+            <summary>
+            Sets a call back to be notified whenever there is an updated PayLevel available.
+            </summary>
+            <param name="onIndividualResultAvailable">OnIndividualResultAvailable</param>
+        </member>
+        <member name="M:BTUGameAPI.SetPayLevelUpdateCallBack(OnPayLevelUpdate)">
+            <summary>
+            Sets a call back to be notified whenever there is an updated PayLevel available.
+            </summary>
+            <param name="onPayLevelUpdate">The observer method of type OnPayLevelUpdate to be called on an update</param>
+        </member>
+        <member name="M:BTUGameAPI.SetLeaderboardUpdateCallBack(OnLeaderboardUpdate)">
+            <summary>
+            Sets a call back to be notified whenever there is a leaderboard update available.
+            </summary>
+            <param name="onLeaderboardUpdate">The observer method of type OnLeaderboardUpdate to be called on an update</param>
+        </member>
+        <member name="M:BTUGameAPI.UnityReady">
+            <summary>
+            Command to move from Unity Loading Layout to Unity Full Screen Layout
+            </summary>
+        </member>
+        <member name="M:BTUGameAPI.SubmitTickets(Tickets)">
+            <summary>
+            Command to submit the user purchased tickets.
+            </summary>
+            <param name="tickets">object of type Tickets</param>
+        </member>
+        <member name="M:BTUGameAPI.PurchaseTiles(Board)">
+            <summary>
+            Command to submit the user purchased tickets.
+            </summary>
+            <param name="board">object of type Board</param>
+        </member>
+        <member name="M:BTUGameAPI.PostIntermediateScore(System.UInt32,System.UInt32,System.String)">
+            <summary>
+            Command to post the intermediate score at the end of every game play event.
+            </summary>
+            <param name="totalScore">overall score since the start of the game</param>
+            <param name="currentSpinScore">score generated from current spin/game play event</param>
+            <param name="outcome">outcome that generated this score, as a comma seperated string for regulatory reasons. eg: for a 3-reel game - GOLD,EMERALD,RUBY,SCATTER,DIAMOND,GEM,ROCK,BOOT,SCATTER</param>
+        </member>
+        <member name="M:BTUGameAPI.fireAction(System.String)">
+            <summary>
+            Fire a http:// WebRequest from the client
+            </summary>
+            <param name="httpRequest">WebRequest string eg:http://127.0.0.1:8001/iView/action/Ebs/BeginPlay?deviceClass=tournament&amp;deviceId=11</param>
+        </member>
+        <member name="M:BTUGameAPI.forwardAction(System.String)">
+            <summary>
+            Forward a http:// WebRequest to the GameManager to fire to any dynamic location.
+            </summary>
+            <param name="httpRequest">WebRequest string eg:http://127.0.0.1:8001/iView/action/Ebs/BeginPlay?deviceClass=tournament&amp;deviceId=10</param>
+        </member>
+        <member name="M:BTUGameAPI.SendCommand(BTCommand,System.Object[])">
+            <summary>
+            This function is used to send any recognized command of type BTCommand.
+            Some of them require parameters. Be sure to check the documentation to ensure that all parameters are provided and in the right order.
+            There are also some convenience methods provided for those that require parameters.
+            </summary>
+            <param name="command">command of type BTCommand</param>
+            <param name="parameters"></param>
+        </member>
+        <member name="M:BTUGameAPI.DMFreezeDisplay(System.Single)">
+            <summary>
+            This function freezes the current output signal from the iVIEW DM for the given time.
+            </summary>
+            <param name="time">time in seconds</param>
+        </member>
+        <member name="M:BTUGameAPI.DMScaleCustom(System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Function used to scale the DM to custom co-ordinates.
+            eg: x1=0;x2=100;y1=31.5;y2=100 
+            </summary>
+            <param name="x1">Range 0-100 (only 1 floating point supported) - leftX</param>
+            <param name="x2">Range 0-100 (only 1 floating point supported) - rightX</param>
+            <param name="y1">Range 0-100 (only 1 floating point supported) - topY</param>
+            <param name="y2">Range 0-100 (only 1 floating point supported) - bottomY</param>
+        </member>
+        <member name="M:BTUGameAPI.getCurrentPlayerInfo">
+            <summary>
+            Method to obtain the information of the current player. Could be null if no player card is inserted.
+            </summary>
+            <returns>BTPlayerInfo object</returns>
+        </member>
+        <member name="M:BTUGameAPI.getPromotionSettings">
+            <summary>
+            Method to obtain all the promotion specific information for this instance of the game.
+            </summary>
+            <returns>BTPromotionSettings object</returns>
+        </member>
+        <member name="M:BTUGameAPI.ShowDialog(System.String,System.String,DialogType,OnDialogClose)">
+            <summary>
+            Show a Modal Dialog with the specified message
+            </summary>
+            <param name="message">Message text to be rendered</param>
+            <param name="messageDetail">(optional) More detailed info to be presented to the user</param>
+            <param name="dialogType">Type of the Modal Dialog</param>
+            <param name="onDialogClose">(optional) callback to be invoked when this dialog closes.
+            option value is true if DialogType = InformationBox or DialogType = ConfimationBox and user selects Yes.
+            option value is false if DialogType = ConfimationBox and user selects No.</param>
+        </member>
+        <member name="M:BTUGameAPI.ShowDialog(System.String,System.String,DialogType,OnDialogClose,System.Boolean)">
+            <summary>
+            Show a Modal Dialog with the specified message
+            </summary>
+            <param name="message">Message text to be rendered</param>
+            <param name="messageDetail">(optional) More detailed info to be presented to the user</param>
+            <param name="dialogType">Type of the Modal Dialog</param>
+            <param name="onDialogClose">(optional) callback to be invoked when this dialog closes
+            option value is true if DialogType = InformationBox or DialogType = ConfimationBox and user selects Yes.
+            option value is false if DialogType = ConfimationBox and user selects No.</param> 
+            <param name="captureScreen">Capture the screen with the error message for debugging purposes</param>
+        </member>
+        <member name="M:BTUGameAPI.ShowDialog(System.String,System.String,DialogType,OnDialogClose,System.Boolean,System.Boolean,System.Single)">
+            <summary>
+            Show a Modal Dialog with the specified message
+            </summary>
+            <param name="message">Message text to be rendered</param>
+            <param name="messageDetail">(optional) More detailed info to be presented to the user</param>
+            <param name="dialogType">Type of the Modal Dialog</param>
+            <param name="onDialogClose">(optional) callback to be invoked when this dialog closes
+            option value is true if DialogType = InformationBox or DialogType = ConfimationBox and user selects Yes.
+            option value is false if DialogType = ConfimationBox and user selects No.</param> 
+            <param name="captureScreen">Capture the screen with the error message for debugging purposes</param>
+            <param name="autoHide">Auto hide the message after a delay</param>
+            <param name="time">time duration to show the message for in seconds</param>
+        </member>
+        <member name="M:BTUGameAPI.getCurrentBuckets">
+            <summary>
+            Gets a snapshot of the current display buckets
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BTUGameAPI.ShowWallet">
+            <summary>
+            Hides the game and Loads the Wallet for funds transfers.
+            </summary>
+        </member>
+        <member name="M:BTUGameAPI.GetStringForKey(System.String)">
+            <summary>
+            Returns the string for the given key from the language set in use
+            </summary>
+            <param name="key"></param>
+            <returns>Returns string</returns>
+        </member>
+        <member name="M:BTUGameAPI.SwitchLanguage(System.String)">
+            <summary>
+            Switches the language in use so a new dictionary will be used for fetching the sting literals.
+            </summary>
+            <param name="code">Language Code to use, eg: en or fr</param>
+        </member>
+        <member name="M:BTUGameAPI.CultureFormattedNumber(System.Decimal,System.String,System.Boolean)">
+            <summary>
+            Returns a Formatted String based on the current culture.
+            </summary>
+            <param name="award">The award to be formatted</param>
+            <param name="format">The format to be used for the formatting</param>
+            <param name="removeZerosAfterDecimal">Returns $10 if formatting returns $10.00. Works for ,00 as well. Defaulted to false</param>
+            <returns></returns>
+        </member>
+        <member name="M:BTUGameAPI.CultureFormattedNumber(System.Decimal,System.Boolean)">
+            <summary>
+            Returns a Formatted String based on the current culture. Uses the promotion specific award format.
+            </summary>
+            <param name="award">The award to be formatted</param>
+            <param name="removeZerosAfterDecimal">Returns $10 if formatting returns $10.00. Works for ,00 as well. Defaulted to false</param>
+            <returns></returns>
+        </member>
+        <member name="M:BTUGameAPI.SetOnApplicationEvent(OnEvent)">
+            <summary>
+            This function should be mandatorily set from the game. The API will invoke the call back in case any event of BTEventType occurs.
+            </summary>
+            <param name="onApplicationEvent">A Callback of the type OnApplicationEvent to be invoked when the an event of BTEventType will occur</param>
+        </member>
+        <member name="T:PlayerCardRemovalSetting">
+            <summary>
+            PlayerCardRemovalSetting
+            </summary>
+        </member>
+        <member name="F:PlayerCardRemovalSetting.None">
+            <summary>
+            Not defined (for roped off tournaments)
+            </summary>
+        </member>
+        <member name="F:PlayerCardRemovalSetting.AutoFinish">
+            <summary>
+            If Game Should AutoFinish when the Player Card Is Removed.
+            </summary>
+        </member>
+        <member name="F:PlayerCardRemovalSetting.GameEndWithCurrentScore">
+            <summary>
+            If Game Should End with its current score when the Player Card Is Removed.
+            </summary>
+        </member>
+        <member name="T:SpinButtonType">
+            <summary>
+            SpinButtonType
+            </summary>
+        </member>
+        <member name="F:SpinButtonType.None">
+            <summary>
+            Not defined (for roped off tournaments)
+            </summary>
+        </member>
+        <member name="F:SpinButtonType.SpinButtonOnBaseGame">
+            <summary>
+            The game is driven by the Spin Button on the EGM/Base Game.
+            </summary>
+        </member>
+        <member name="F:SpinButtonType.SpinButtonOnTournamentGame">
+            <summary>
+            The game is driven by the Spin Button within the bonus game.
+            </summary>
+        </member>
+        <member name="F:SpinButtonType.SpinButtonOnBaseGameAndTournamentGame">
+            <summary>
+            The game is driven by the Spin Button on both the EGM and bonus game.
+            </summary>
+        </member>
+        <member name="T:BonusGameState">
+            <summary>
+            BonusGameStates
+            </summary>
+        </member>
+        <member name="F:BonusGameState.idle">
+            <summary>
+            Bonus game state is idle.
+            </summary>
+        </member>
+        <member name="F:BonusGameState.beginGameSent">
+            <summary>
+            Begin game has been sent to the server for this instance.
+            </summary>
+        </member>
+        <member name="F:BonusGameState.beginGameAcked">
+            <summary>
+            Begin game ack has been received from the server for this instance.
+            </summary>
+        </member>
+        <member name="F:BonusGameState.beginGameFailed">
+            <summary>
+            Begin game was not successfull for this instance.
+            </summary>
+        </member>
+        <member name="F:BonusGameState.beginGameAckedAndPlaying">
+            <summary>
+            Begin game was successfull and the bonus game play is in progress.
+            </summary>
+        </member>
+        <member name="F:BonusGameState.endGameSent">
+            <summary>
+            End game has been sent to the server for this instance.
+            </summary>
+        </member>
+        <member name="F:BonusGameState.endGameAcked">
+            <summary>
+            End game has been acknowledged by the server for this instance.
+            </summary>
+        </member>
+        <member name="T:ClassicLottoState">
+            <summary>
+            States for Group/Classic Lotto
+            </summary>
+        </member>
+        <member name="F:ClassicLottoState.idle">
+            <summary>
+            Promotion is not active
+            </summary>
+        </member>
+        <member name="F:ClassicLottoState.openForPurchase">
+            <summary>
+            Ticket Purchasing Is Enabled
+            </summary>
+        </member>
+        <member name="F:ClassicLottoState.countDown">
+            <summary>
+            Countdown state has started. Purchasing shall freeze once timer runs out.
+            </summary>
+        </member>
+        <member name="F:ClassicLottoState.locked">
+            <summary>
+            No more ticket purchase is permitted. Buy should be disabled.
+            </summary>
+        </member>
+        <member name="F:ClassicLottoState.preShow">
+            <summary>
+            Anticipation for results. Game should show some animation if active.
+            </summary>
+        </member>
+        <member name="F:ClassicLottoState.showResults">
+            <summary>
+            Results are available to be presented.
+            </summary>
+        </member>
+        <member name="T:LottoState">
+            <summary>
+            States for Instant Lotto. Also Reused In Group Lotto.
+            </summary>
+        </member>
+        <member name="F:LottoState.idle">
+            <summary>
+            idle
+            </summary>
+        </member>
+        <member name="F:LottoState.open">
+            <summary>
+            Game is open
+            </summary>
+        </member>
+        <member name="F:LottoState.ticketsSent">
+            <summary>
+            Ticket(s) Submitted
+            </summary>
+        </member>
+        <member name="F:LottoState.ticketsAcked">
+            <summary>
+            Ticket Submit Acked
+            </summary>
+        </member>
+        <member name="F:LottoState.ticketsSubmissionFailed">
+            <summary>
+            Ticket Submission failed.
+            </summary>
+        </member>
+        <member name="F:LottoState.resultsReceived">
+            <summary>
+            Results Received
+            </summary>
+        </member>
+        <member name="F:LottoState.resultsPresentedSent">
+            <summary>
+            Results Presented to the user Sent to EBS
+            </summary>
+        </member>
+        <member name="F:LottoState.resultsPresentedAcked">
+            <summary>
+            Results Presented to user Acked
+            </summary>
+        </member>
+        <member name="F:LottoState.resultsReceiveFailed">
+            <summary>
+            Failure while receiving results.
+            </summary>
+        </member>
+        <member name="F:LottoState.resultsPresenting">
+            <summary>
+            Result is being presented to the user.
+            </summary>
+        </member>
+        <member name="T:TicketRequestState">
+            <summary>
+            Previously purchased tickets request state.
+            </summary>
+        </member>
+        <member name="F:TicketRequestState.idle">
+            <summary>
+            idle
+            </summary>
+        </member>
+        <member name="F:TicketRequestState.ticketsRequested">
+            <summary>
+            Previously purchased tickets have been requested
+            </summary>
+        </member>
+        <member name="F:TicketRequestState.ticketsReceived">
+            <summary>
+            Previously purchased tickets have been received
+            </summary>
+        </member>
+        <member name="F:TicketRequestState.ticketsReceiveFailed">
+            <summary>
+            Unable to query tickets purchased prior to this instance.
+            </summary>
+        </member>
+        <member name="T:WinningsRequestState">
+            <summary>
+            WinningsRequestState
+            </summary>
+        </member>
+        <member name="F:WinningsRequestState.idle">
+            <remarks/> 
+        </member>
+        <member name="F:WinningsRequestState.winningsRequested">
+            <remarks/> 
+        </member>
+        <member name="F:WinningsRequestState.winningsReceiveFailed">
+            <remarks/> 
+        </member>
+        <member name="F:WinningsRequestState.winningsReceived">
+            <remarks/> 
+        </member>
+        <member name="T:TileType">
+            <summary>
+            Enum definition for TileType
+            </summary>
+        </member>
+        <member name="F:TileType.chance">
+            <remarks/>
+        </member>
+        <member name="F:TileType.communityChest">
+            <remarks/>
+        </member>
+        <member name="F:TileType.property">
+            <remarks/>
+        </member>
+        <member name="F:TileType.railroad">
+            <remarks/>
+        </member>
+        <member name="F:TileType.special">
+            <remarks/>
+        </member>
+        <member name="F:TileType.tax">
+            <remarks/>
+        </member>
+        <member name="F:TileType.utility">
+            <remarks/>
+        </member>
+        <member name="T:RoundType">
+            <summary>
+            Round Type describing type of Monopoly Results
+            </summary>
+        </member>
+        <member name="F:RoundType.extended">
+            <remarks/>
+        </member>
+        <member name="F:RoundType.simple">
+            <remarks/>
+        </member>
+        <member name="T:TileActionType">
+            <summary>
+            Tile Action Type
+            </summary>
+        </member>
+        <member name="F:TileActionType.awardAll">
+            <remarks/>
+        </member>
+        <member name="F:TileActionType.awardWinner">
+            <remarks/>
+        </member>
+        <member name="F:TileActionType.doNothing">
+            <remarks/>
+        </member>
+        <member name="F:TileActionType.drawCard">
+            <remarks/>
+        </member>
+        <member name="F:TileActionType.goToJail">
+            <remarks/>
+        </member>
+        <member name="F:TileActionType.getOutofJail">
+            <remarks/>
+        </member>
+        <member name="T:CardActionType">
+            <summary>
+            Community Chest/Chance Card Action Type
+            </summary>
+        </member>
+        <member name="F:CardActionType.award">
+            <remarks/>
+        </member>
+        <member name="F:CardActionType.goTo">
+            <remarks/>
+        </member>
+        <member name="F:CardActionType.goToJail">
+            <remarks/>
+        </member>
+        <member name="F:CardActionType.goToNext">
+            <remarks/>
+        </member>
+        <member name="F:CardActionType.getOutOfJail">
+            <remarks/>
+        </member>
+        <member name="F:CardActionType.moveBy">
+            <remarks/>
+        </member>
+        <member name="T:Movement">
+            <summary>
+            Direction of movement for Mr. Monopoly around the board.
+            </summary>
+        </member>
+        <member name="F:Movement.clockwise">
+            <remarks/>
+        </member>
+        <member name="F:Movement.none">
+            <remarks/>
+        </member>
+        <member name="F:Movement.counterClockwise">
+            <remarks/>
+        </member>
+        <member name="T:PropertyDevLevel">
+            <summary>
+            Property Development Levels
+            </summary>
+        </member>
+        <member name="F:PropertyDevLevel.None">
+            <remarks/>
+        </member>
+        <member name="F:PropertyDevLevel.OneHouse">
+            <remarks/>
+        </member>
+        <member name="F:PropertyDevLevel.TwoHouses">
+            <remarks/>
+        </member>
+        <member name="F:PropertyDevLevel.ThreeHouses">
+            <remarks/>
+        </member>
+        <member name="F:PropertyDevLevel.FourHouses">
+            <remarks/>
+        </member>
+        <member name="F:PropertyDevLevel.Hotel">
+            <remarks/>
+        </member>
+        <member name="T:UtilityDevLevel">
+            <summary>
+            Utility Development Levels
+            </summary>
+        </member>
+        <member name="F:UtilityDevLevel.None">
+            <remarks/>
+        </member>
+        <member name="F:UtilityDevLevel.OneUtility">
+            <remarks/>
+        </member>
+        <member name="F:UtilityDevLevel.TwoUtilities">
+            <remarks/>
+        </member>
+        <member name="T:RailroadDevLevel">
+            <summary>
+            Railroad Development Levels
+            </summary>
+        </member>
+        <member name="F:RailroadDevLevel.None">
+            <remarks/>
+        </member>
+        <member name="F:RailroadDevLevel.OneRailroad">
+            <remarks/>
+        </member>
+        <member name="F:RailroadDevLevel.TwoRailroads">
+            <remarks/>
+        </member>
+        <member name="F:RailroadDevLevel.ThreeRailroads">
+            <remarks/>
+        </member>
+        <member name="F:RailroadDevLevel.FourRailroads">
+            <remarks/>
+        </member>
+        <member name="T:TileIdType">
+            <summary>
+            TileIdMapping
+            </summary>
+        </member>
+        <member name="F:TileIdType.Go">
+            <remarks/>
+        </member>
+        <member name="F:TileIdType.MediterraneanAvenue">
+            <remarks/>
+        </member>
+        <member name="F:TileIdType.CommunityChest">
+            <remarks/>
+        </member>
+        <member name="F:TileIdType.BalticAvenue">
+            <remarks/>
+        </member>
+        <member name="F:TileIdType.IncomeTax">
+            <remarks/>
+        </member>
+        <member name="F:TileIdType.ReadingRailroad">
+            <remarks/>
+        </member>
+        <member name="F:TileIdType.OrientalAvenue">
+            <remarks/>
+        </member>
+        <member name="F:TileIdType.Chance">
+            <remarks/>    
+        </member>
+        <member name="F:TileIdType.VermontAvenue">
+            <remarks/>
+        </member>
+        <member name="F:TileIdType.ConnecticutAvenue">
+            <remarks/>
+        </member>
+        <member name="F:TileIdType.JustVisitingJail">
+            <remarks/>
+        </member>
+        <member name="F:TileIdType.StCharlesPlace">
+            <remarks/>
+        </member>
+        <member name="F:TileIdType.ElectricCompany">
+            <remarks/>
+        </member>
+        <member name="F:TileIdType.StatesAvenue">
+            <remarks/>
+        </member>
+        <member name="F:TileIdType.VirginiaAvenue">
+            <remarks/>
+        </member>
+        <member name="F:TileIdType.PennsylvaniaRailroad">
+            <remarks/>
+        </member>
+        <member name="F:TileIdType.StJamesPlace">
+            <remarks/>
+        </member>
+        <member name="F:TileIdType.TennesseeAvenue">
+            <remarks/>
+        </member>
+        <member name="F:TileIdType.NewYorkAvenue">
+            <remarks/>
+        </member>
+        <member name="F:TileIdType.FreeParking">
+            <remarks/>
+        </member>
+        <member name="F:TileIdType.KentuckyAvenue">
+            <remarks/>
+        </member>
+        <member name="F:TileIdType.IndianaAvenue">
+            <remarks/>
+        </member>
+        <member name="F:TileIdType.IllinoisAvenue">
+            <remarks/>
+        </member>
+        <member name="F:TileIdType.BaORailRoad">
+            <remarks/>
+        </member>
+        <member name="F:TileIdType.AtlanticAvenue">
+            <remarks/>
+        </member>
+        <member name="F:TileIdType.VentnorAvenue">
+            <remarks/>
+        </member>
+        <member name="F:TileIdType.WaterWorks">
+            <remarks/>
+        </member>
+        <member name="F:TileIdType.MarvinGardens">
+            <remarks/>
+        </member>
+        <member name="F:TileIdType.GoToJail">
+            <remarks/>
+        </member>
+        <member name="F:TileIdType.PacificAvenue">
+            <remarks/>
+        </member>
+        <member name="F:TileIdType.NorthCarolinaAvenue">
+            <remarks/>
+        </member>
+        <member name="F:TileIdType.PennsylvaniaAvenue">
+            <remarks/>
+        </member>
+        <member name="F:TileIdType.ShortLine">
+            <remarks/>
+        </member>
+        <member name="F:TileIdType.ParkPlace">
+            <remarks/>
+        </member>
+        <member name="F:TileIdType.LuxuryTax">
+            <remarks/>
+        </member>
+        <member name="F:TileIdType.BoardWalk">
+            <remarks/>
+        </member>
+        <member name="F:TileIdType.Jail">
+            <remarks/>
+        </member>
+        <member name="T:MonopolyRoundState">
+            <summary>
+            Monopoly Round State
+            </summary>
+        </member>
+        <member name="F:MonopolyRoundState.idle">
+            <remarks/>
+        </member>
+        <member name="F:MonopolyRoundState.openForPurchase">
+            <remarks/>
+        </member>
+        <member name="F:MonopolyRoundState.countDown">
+            <remarks/>
+        </member>
+        <member name="F:MonopolyRoundState.locked">
+            <remarks/>
+        </member>
+        <member name="F:MonopolyRoundState.preRound">
+            <remarks/>
+        </member>
+        <member name="F:MonopolyRoundState.startRound">
+            <remarks/>
+        </member>
+        <member name="T:MonopolyPurchaseState">
+            <summary>
+            Monopoly Purchase State
+            </summary>
+        </member>
+        <member name="F:MonopolyPurchaseState.idle">
+            <remarks/>
+        </member>
+        <member name="F:MonopolyPurchaseState.purchaseSent">
+            <remarks/>
+        </member>
+        <member name="F:MonopolyPurchaseState.purchaseAcked">
+            <remarks/>
+        </member>
+        <member name="F:MonopolyPurchaseState.purchaseSubmissionFailed">
+            <remarks/>
+        </member>
+        <member name="T:MonopolyResultsPresentingState">
+            <summary>
+            Monopoly Results Presenting State
+            </summary>
+        </member>
+        <member name="F:MonopolyResultsPresentingState.idle">
+            <remarks/>
+        </member>
+        <member name="F:MonopolyResultsPresentingState.resultsReceived">
+            <remarks/>
+        </member>
+        <member name="F:MonopolyResultsPresentingState.resultsReceiveFailed">
+            <remarks/>
+        </member>
+        <member name="F:MonopolyResultsPresentingState.resultsPresenting">
+            <remarks/>
+        </member>
+        <member name="F:MonopolyResultsPresentingState.resultsPresentedSent">
+            <remarks/>
+        </member>
+        <member name="F:MonopolyResultsPresentingState.resultsPresentedAcked">
+            <remarks/>
+        </member>
+        <member name="T:MonopolyPurchaseRequestState">
+            <summary>
+            Monopoly Purchase Request States
+            </summary>
+        </member>
+        <member name="F:MonopolyPurchaseRequestState.idle">
+            <remarks/>
+        </member>
+        <member name="F:MonopolyPurchaseRequestState.purchaseRequested">
+            <remarks/>
+        </member>
+        <member name="F:MonopolyPurchaseRequestState.purchaseReceived">
+            <remarks/>
+        </member>
+        <member name="F:MonopolyPurchaseRequestState.purchaseReceiveFailed">
+            <remarks/>
+        </member>
+        <member name="T:ScoringMethod">
+            <summary>
+            ScoringMethods
+            </summary>
+        </member>
+        <member name="F:ScoringMethod.BestScore">
+            <summary>
+            Scoring method is Best Score of all entries for each player.
+            </summary>
+        </member>
+        <member name="F:ScoringMethod.AllScores">
+            <summary>
+            Scoring method uses All Scores from all entries for each player.
+            </summary>
+        </member>
+        <member name="F:ScoringMethod.SumOfScores">
+            <summary>
+            Scoring method is Sum of All Score from all entries for each player.
+            </summary>
+        </member>
+        <member name="T:PlayerEligibilityState">
+            <summary>
+            PlayerEligibilityState
+            </summary>
+        </member>
+        <member name="F:PlayerEligibilityState.idle">
+            <summary>
+            Idle indicates no card has been inserted.
+            </summary>
+        </member>
+        <member name="F:PlayerEligibilityState.invalidCard">
+            <summary>
+            An Invalid Card read has occured.
+            </summary>
+        </member>
+        <member name="F:PlayerEligibilityState.validating">
+            <summary>
+            Player eligibility is being validated.
+            </summary>
+        </member>
+        <member name="F:PlayerEligibilityState.eligible">
+            <summary>
+            Player is eligible for this instance of the promotion.
+            </summary>
+        </member>
+        <member name="F:PlayerEligibilityState.notEligible">
+            <summary>
+            Player is not eligible for this instance of the promotion.
+            </summary>
+        </member>
+        <member name="T:SessionState">
+            <summary>
+            SessionStates
+            </summary>
+        </member>
+        <member name="F:SessionState.idle">
+            <summary>
+            Session State is idle - indicates no card in
+            </summary>
+        </member>
+        <member name="F:SessionState.startSessionSent">
+            <summary>
+            Start session has been sent to the EBS server.
+            </summary>
+        </member>
+        <member name="F:SessionState.startSessionAcked">
+            <summary>
+            Start session has been acknowledged by the EBS server.
+            </summary>
+        </member>
+        <member name="F:SessionState.startSessionFailed">
+            <summary>
+            Start session has failed. Look at startSessionFailReason for more info.
+            </summary>
+        </member>
+        <member name="T:StartMode">
+            <summary>
+            StartMode
+            </summary>
+        </member>
+        <member name="F:StartMode.player">
+            <summary>
+            Player shall initiate when the game begins.
+            </summary>
+        </member>
+        <member name="F:StartMode.server">
+            <summary>
+            Server shall initiate when the game begins.
+            </summary>
+        </member>
+        <member name="T:GameMode">
+            <summary>
+            Mode - Specifically for AppType = tournament
+            </summary>
+        </member>
+        <member name="F:GameMode.normal">
+            <summary>
+            Indicates Bonus Tournament where iVIEW does not take exclusive access of the Display
+            </summary>
+        </member>
+        <member name="F:GameMode.exclusive">
+            <summary>
+            Indicates Roped off Tournament where iVIEW will take exclusive access of the Display
+            </summary>
+        </member>
+        <member name="T:ObservationType">
+            <summary>
+            ObservationType
+            </summary>
+        </member>
+        <member name="F:ObservationType.New">
+            <summary>
+            Observe and report only the New value upon a change.
+            </summary>
+        </member>
+        <member name="F:ObservationType.Old">
+            <summary>
+            Observe and report only the Old value upon a change.
+            </summary>
+        </member>
+        <member name="F:ObservationType.Both">
+            <summary>
+            Observe and report both the Old and New value upon a change.
+            </summary>
+        </member>
+        <member name="T:CelebrationLevel">
+            <summary>
+            CelebrationLevel
+            </summary>
+        </member>
+        <member name="F:CelebrationLevel.Undefined">
+            <summary>
+            Celebration level is not defined for this instance of the promotion/game.
+            </summary>
+        </member>
+        <member name="F:CelebrationLevel.None">
+            <summary>
+            No Celebration is required for this instance of the promotion/game.
+            </summary>
+        </member>
+        <member name="F:CelebrationLevel.Low">
+            <summary>
+            Good Celebration is required for this instance of the promotion/game.
+            </summary>
+        </member>
+        <member name="F:CelebrationLevel.Medium">
+            <summary>
+            Better Celebration is required for this instance of the promotion/game.
+            </summary>
+        </member>
+        <member name="F:CelebrationLevel.High">
+            <summary>
+            Best Celebration is required for this instance of the promotion/game.
+            </summary>
+        </member>
+        <member name="F:CelebrationLevel.Ultimate">
+            <summary>
+            Ultimate Celebration is required for this instance of the promotion/game.
+            </summary>
+        </member>
+        <member name="T:DialogType">
+            <summary>
+            DialogType to indicate the type of modal dialog box to be drawn.
+            </summary>
+        </member>
+        <member name="F:DialogType.Error">
+            <summary>
+            Shows a modal dialog with an ExitButton
+            </summary>
+        </member>
+        <member name="F:DialogType.ConfirmationBox">
+            <summary>
+            Shows a modal dialog with a Yes or No(Ok,Cancel) button
+            </summary>
+        </member>
+        <member name="F:DialogType.InformationBox">
+            <summary>
+            Shows a modal dialog with a single Ok button. Used to present an information.
+            </summary>
+        </member>
+        <member name="F:DialogType.StatusBox">
+            <summary>
+            Shows a modal dialog with the current system status. No buttons shall be rendered.
+            </summary>
+        </member>
+        <member name="T:PaymentMethodLegacy">
+            <summary>
+            The type of the PayMethod to the player (currently for uspin)
+            </summary>
+        </member>
+        <member name="F:PaymentMethodLegacy.Unknown">
+            <summary>
+            Unknown Pay Method
+            </summary>
+        </member>
+        <member name="F:PaymentMethodLegacy.CMS">
+            <summary>
+            Indicates that winnings are directly transfered to the Player Account.
+            </summary>
+        </member>
+        <member name="F:PaymentMethodLegacy.HouseAccount">
+            <summary>
+            Indicates that the winnings were awarded back to the Casino.
+            </summary>
+        </member>
+        <member name="F:PaymentMethodLegacy.HandPay">
+            <summary>
+            Indicates that the winnings shall be manually paid at the service center.
+            </summary>
+        </member>
+        <member name="F:PaymentMethodLegacy.PlayerCard">
+            <summary>
+            Indicates that the winnings were added to the player/smart card.
+            </summary>
+        </member>
+        <member name="F:PaymentMethodLegacy.Game">
+            <summary>
+            Indicates that the winnings were transferred to the EGM/base game.
+            </summary>
+        </member>
+        <member name="T:PaymentMethod">
+            <summary>
+            The type of the PayMethod to the player as defined in protocol
+            </summary>
+        </member>
+        <member name="F:PaymentMethod.any">
+            <summary>
+            Unknown Pay Method
+            </summary>
+        </member>
+        <member name="F:PaymentMethod.cmsAccount">
+            <summary>
+            Indicates that winnings are directly transfered to the Player Account.
+            </summary>
+        </member>
+        <member name="F:PaymentMethod.credit">
+            <summary>
+            Indicates that the winnings were transferred to the EGM/base game.
+            </summary>
+        </member>
+        <member name="F:PaymentMethod.handpay">
+            <summary>
+            Indicates that the winnings shall be manually paid at the service center.
+            </summary>
+        </member>
+        <member name="F:PaymentMethod.payToEGM">
+            <summary>
+            Indicates that the winnings were transferred to the EGM/base game.
+            </summary>
+        </member>
+        <member name="F:PaymentMethod.smartCard">
+            <summary>
+            Indicates that the winnings were added to the player/smart card.
+            </summary>
+        </member>
+        <member name="F:PaymentMethod.voucher">
+            <summary>
+            Indicates that the winnings were transferred to the EGM/base game and a voucher will be printed.
+            </summary>
+        </member>
+        <member name="F:PaymentMethod.wallet">
+            <summary>
+            Indicates that the winnings were transferred to the EGM or Player Wallet (maintained by EBS).
+            </summary>
+        </member>
+        <member name="T:PrizeType">
+            <summary>
+            The type of prize awarded
+            </summary>
+        </member>
+        <member name="F:PrizeType.Unknown">
+            <summary>
+            Not defined or known prize type.
+            </summary>
+        </member>
+        <member name="F:PrizeType.Cash">
+            <summary>
+            Prize awarded in form of cash.(non tax deductible)
+            </summary>
+        </member>
+        <member name="F:PrizeType.Points">
+            <summary>
+            Prize awarded in form of Points.
+            </summary>
+        </member>
+        <member name="F:PrizeType.PromotionalCredits">
+            <summary>
+            Prize awarded Promo (non cashable)
+            </summary>
+        </member>
+        <member name="F:PrizeType.MarketingRestrictedCash">
+            <summary>
+            Prize awarded as non-cashable credit to the EGM.(non tax deductible)
+            </summary>
+        </member>
+        <member name="F:PrizeType.GamingCash">
+            <summary>
+            Prize awarded to the EGM (tax deductible)
+            </summary>
+        </member>
+        <member name="F:BTCommandsInternal.UnityGameReady">
+            <summary>
+            Command to move from Unity Loading Layout to Unity Full Screen Layout
+            </summary>
+        </member>
+        <member name="F:BTCommandsInternal.actionPlayerConfirmedSocialPost">
+            <summary>
+            Command to post the screenshot to a remote server (eg: use to post to facebook)
+            </summary>
+        </member>
+        <member name="F:BTCommandsInternal.actionResultsPresenting">
+            <summary>
+            Command to inform core that the Result Presentation Has Begun (Lotto)
+            </summary>
+        </member>
+        <member name="F:BTCommandsInternal.actionNoOfSelectedTickets">
+            <summary>
+            Command to update the no Of selected tickets in the Lotto Game so that Wallet Balance in Flash is in sync.
+            </summary>
+        </member>
+        <member name="F:BTCommandsInternal.actionEmployeeUnlockEGMAndExit">
+            <summary>
+            Command to unlock the EGM and then Exit the Game
+            </summary>
+        </member>
+        <member name="F:BTCommandsInternal.actionClearTickets">
+            <summary>
+            Command to clear the temporary ticket count in Core memory, incase game is recycled during an instantHit open state.
+            </summary>
+        </member>
+        <member name="T:BTCommand">
+            <summary>
+            List of all supported commands for a bonus game. For for custom commands use BTUGameAPI.fireAction() or BTUGameAPI.forwardAction()
+            </summary>
+        </member>
+        <member name="F:BTCommand.actionBeginGame">
+            <summary>
+            Command to send a begin game. Currently only a Player start roped-off tournament game uses this feature. All others have this already fired when the game is launched.
+            </summary>
+        </member>
+        <member name="F:BTCommand.actionReadyToPlay">
+            <summary>
+            Ready To Play to signify that the game has completely loaded and is ready for user interaction.(currently used only in bonus tournaments)
+            </summary>
+        </member>
+        <member name="F:BTCommand.actionBeginPlay">
+            <summary>
+            Command to indicate to Core that Player has commited to the game. The session is locked till an end game occurs.
+            </summary>
+        </member>
+        <member name="F:BTCommand.actionEndGame">
+            <summary>
+            Command to indicate to Core that the bonus game has concluded and the Player session can be unlocked.
+            </summary>
+        </member>
+        <member name="F:BTCommand.actionExitGame">
+            <summary>
+            All bonus games should use this method to trigger an Exit Game which close the bonus game and perform the necessary clean up. 
+            Using Application.Quit at any time will result in undesirable results.
+            </summary>
+        </member>
+        <member name="F:BTCommand.actionDMFreeze">
+            <summary>
+            This function freezes the current output signal from the iVIEW DM for the given time.
+            </summary>
+            <param name="time">time in seconds</param>
+        </member>
+        <member name="F:BTCommand.actionDMScale">
+            <summary>
+            Function used to scale the DM to custom co-ordinates.
+            eg: x1=0;x2=100;y1=31.5;y2=100 
+            </summary>
+            <param name="x1">Range 0-100 (only 1 floating point supported) - leftX</param>
+            <param name="x2">Range 0-100 (only 1 floating point supported) - rightX</param>
+            <param name="y1">Range 0-100 (only 1 floating point supported) - topY</param>
+            <param name="y2">Range 0-100 (only 1 floating point supported) - bottomY</param>
+        </member>
+        <member name="F:BTCommand.actionDMiVIEWDisplayOn">
+            <summary>
+            This function issues a call to turn the iVIEW VGA output on,
+            Does not perform any scaling.
+            </summary>
+        </member>
+        <member name="F:BTCommand.actionDMiVIEWDisplayOff">
+            <summary>
+            This function issues a call to turn the iVIEW VGA output off,
+            essentially making the EGM display fullscreen.
+            </summary>
+        </member>
+        <member name="F:BTCommand.actionDMiVIEWFullScreen">
+            <summary>
+            This function issues a call to make the iVIEW VGA output go fullscreen,
+            essentially hiding the EGM display.
+            </summary>
+        </member>
+        <member name="F:BTCommand.actionPostIntermediateScoreWithOutcome">
+            <summary>
+            Command to post the intermediate score at the end of every game play event.
+            </summary>
+            <param name="score">score generated from current spin/game play event</param>
+            <param name="totalScore">overall score since the start of the game</param>
+            <param name="outcome">outcome that generated this score, as a comma seperated string for regulatory reasons. eg: for a 3-reel game - GOLD,EMERALD,RUBY,SCATTER,DIAMOND,GEM,ROCK,BOOT,SCATTER</param>
+        </member>
+        <member name="F:BTCommand.actionSetClick">
+            <summary>
+            Command to Set the x,y co-ordinates of the center of the Spin/Stop button which the EGMButtonDriver will click when the user hits the Spin button.
+            </summary>
+            <param name="x">(int) x co-ordinate</param>
+            <param name="y">(int) y co-ordinate</param>
+        </member>
+        <member name="F:BTCommand.actionEnableEGMButton">
+            <summary>
+            Command to Enable/Disable the EGM (base game) Spin/Stop button driver to send hits to the game.
+            </summary>
+            <param name="bool">Call with boolean true/false</param>
+        </member>
+        <member name="F:BTCommand.actionEGMButtonLight">
+            <summary>
+            Command to Enable/Disable the EGM (base game) Spin/Stop button light.
+            </summary>
+            <param name="bool">Call with boolean true/false</param>
+        </member>
+        <member name="F:BTCommand.actionEmployeeDisableTournament">
+            <summary>
+            Command to disable the iVIEW from exclusive tournament mode (only to be used in case of a crash)
+            </summary>
+        </member>
+        <member name="F:BTCommand.actionCloseSession">
+            <summary>
+            Command to close the player session. Used in standalone tournament mode only.
+            </summary>
+        </member>
+        <member name="F:BTCommand.actionValidateCode">
+            <summary>
+            Command to validate the player registration code (Standalone tournament).
+            Send the entered DRB code to EBS for verification.
+            </summary>
+            <param name="string">Call with registration code string</param>
+        </member>
+        <member name="F:BTCommand.actionConfirmName">
+            <summary>
+            Command to acknowledge that the player confirmed their name (Standalone tournament).
+            </summary>
+        </member>
+        <member name="F:BTCommand.actionSubmitTickets">
+            <summary>
+            Command to submit the purchased ticket(s).
+            </summary>
+            <param name="Tickets">send the object of type Tickets</param>
+        </member>
+        <member name="F:BTCommand.actionResetGame">
+            <summary>
+            Command to Reset the Core states in Instant Lotto Play. If player choses to Play Again at the end of the game.
+            </summary>
+        </member>
+        <member name="F:BTCommand.actionResultsPresented">
+            <summary>
+            Command to inform iVIEW Core and EBS and the Drawing Results have been presented.
+            </summary>
+        </member>
+        <member name="F:BTCommand.actionHideGame">
+            <summary>
+            Command to request iVIEW Display to hide the Unity game and show other content (eg: in flash).
+            </summary>
+        </member>
+        <member name="F:BTCommand.actionTicketSelected">
+            <summary>
+            To increment the selected ticket count in core.
+            </summary>
+        </member>
+        <member name="F:BTCommand.actionPurchaseTiles">
+            <summary>
+            Command to submit the purchased tile(s).
+            </summary>
+            <param name="Board">send the object of type Board</param>
+        </member>
+        <member name="T:TournamentCodeValidationState">
+            <summary>
+            The validation state of the tournament code (standalone tournaments)
+            </summary>
+        </member>
+        <member name="F:TournamentCodeValidationState.idle">
+            <summary>
+            Indicates that a tournament code is yet to be or typed.
+            </summary>
+        </member>
+        <member name="F:TournamentCodeValidationState.codeSentForValidation">
+            <summary>
+            Indicates that a tournament code has been sent for validation
+            </summary>
+        </member>
+        <member name="F:TournamentCodeValidationState.codeValidated">
+            <summary>
+            Indicates that the given tournament code has been successfully validated by EBS.
+            </summary>
+        </member>
+        <member name="F:TournamentCodeValidationState.codeValidationFailed">
+            <summary>
+            Indicates that the tournament code has failed validation. Look to standaloneTournamentCodeValidationFailReason for further information
+            </summary>
+        </member>
+        <member name="T:AppType">
+            <summary>
+            The EBS App Type this game belongs to.
+            </summary>
+        </member>
+        <member name="F:AppType.unknown">
+            <summary>
+            Unknown/Undefined/Invalid AppType (Error State)
+            </summary>
+        </member>
+        <member name="F:AppType.uSpin">
+            <summary>
+            U-Spin eg: Wheel Bonusing, Skee Ball
+            </summary>
+        </member>
+        <member name="F:AppType.powerWinners">
+            <summary>
+            Power Winners eg: HiLo
+            </summary>
+        </member>
+        <member name="F:AppType.powerMystery">
+            <summary>
+            Power/Coin-in Mystery eg: Game of Life
+            </summary>
+        </member>
+        <member name="F:AppType.luckyMatch">
+            <summary>
+            Lucky Match Bonusing (LMB) eg: LuckyLucky
+            </summary>
+        </member>
+        <member name="F:AppType.flexRewards">
+            <summary>
+            Flex Rewards Bonusing (FRB) eg: PiratesGold
+            </summary>
+        </member>
+        <member name="F:AppType.pokerBonus">
+            <summary>
+            Poker Bonusing
+            </summary>
+        </member>
+        <member name="F:AppType.dynamicRandomBonus">
+            <summary>
+            Dynamic Random Bonusing (DRB) eg: SecretCode
+            </summary>
+        </member>
+        <member name="F:AppType.virtualRacing">
+            <summary>
+            Virtual Racing (VR)
+            </summary>
+        </member>
+        <member name="F:AppType.tournament">
+            <summary>
+            DM Tournaments eg: Bonus Tournaments (ProspectorsPlunge), Roped-off Tournaments (HotShot)
+            </summary>
+        </member>
+        <member name="F:AppType.monopoly">
+            <summary>
+            Any Monopoly Based Game eg: MonopolyRoulette
+            </summary>
+        </member>
+        <member name="F:AppType.classicLotto">
+            <summary>
+            Any Lotto Game supporting DM Wagering For Group Play.
+            </summary>
+        </member>
+        <member name="F:AppType.instantHitLotto">
+            <summary>
+            Any Lotto Game supporting DM Wagering For Instant Play.
+            </summary>
+        </member>
+        <member name="F:AppType.collectibles">
+            <summary>
+            Collectibles eg: Treasures of Ra
+            </summary>
+        </member>
+        <member name="T:HardwarePlatform">
+            <summary>
+            The target hardware on which the game is being run on.
+            </summary>
+        </member>
+        <member name="F:HardwarePlatform.IVIEW3">
+            <summary>
+            iVIEW3/iVISTA3
+            </summary>
+        </member>
+        <member name="F:HardwarePlatform.IVIEW4">
+            <summary>
+            iVIEW4/iVISTA4
+            </summary>
+        </member>
+        <member name="T:BTEventType">
+            <summary>
+            The EventType for which the OnEvent call back is called
+            </summary>
+        </member>
+        <member name="F:BTEventType.ApplicationPause">
+            <summary>
+            Event requesting the game to pause of unpause.
+            </summary>
+        </member>
+        <member name="F:BTEventType.EmployeeInterrupt">
+            <summary>
+            Event indicating if the employee card is currently inserted or not.
+            </summary>
+        </member>
+        <member name="F:BTEventType.PlayerCardPulled">
+            <summary>
+            Event indicating if the player card was pulled during the game. Games may use this to trigger events like AutoPlay/AutoFinish.
+            </summary>
+        </member>
+        <member name="F:BTEventType.PromotionSettingsReady">
+            <summary>
+            Event indicating that the promotion settings are now available to access. Use BTUGameAPI.getPromotionSettings()
+            </summary>
+        </member>
+        <member name="F:BTEventType.DisplayBucketUpdate">
+            <summary>
+            Signals the availability of new DisplayBuckets as a Dictionary of key value pairs as seen on html only and subscribed by game. Use BTUGameAPI.getCurrentBuckets()
+            </summary>
+        </member>
+        <member name="F:BTEventType.BaseGamePlayed">
+            <summary>
+            Indicates that the base game was played once.
+            </summary>
+        </member>
+        <member name="T:TicketSelectionState">
+            <summary>
+            The Ticket Selection State to track status of tickets in Core.
+            </summary>
+        </member>
+        <member name="F:TicketSelectionState.idle">
+            <summary>
+            idle
+            </summary>
+        </member>
+        <member name="F:TicketSelectionState.ticketSelecting">
+            <summary>
+            Selected ticket update being sent to Core.
+            </summary>
+        </member>
+        <member name="F:TicketSelectionState.ticketSelected">
+            <summary>
+            Ticket Selection updated in Core.
+            </summary>
+        </member>
+        <member name="T:MessageKind">
+            <summary>
+            Message Kind for Message Driven Promotions
+            </summary>
+        </member>
+        <member name="F:MessageKind.none">
+            <remarks/> 
+        </member>
+        <member name="F:MessageKind.jackpotUpdate">
+            <remarks/> 
+        </member>
+        <member name="F:MessageKind.generalMessage">
+            <remarks/> 
+        </member>
+        <member name="F:MessageKind.anticipation">
+            <remarks/> 
+        </member>
+        <member name="F:MessageKind.notWinner">
+            <remarks/> 
+        </member>
+        <member name="F:MessageKind.winner">
+            <remarks/> 
+        </member>
+        <member name="F:MessageKind.hit">
+            <remarks/> 
+        </member>
+        <member name="T:DynamicRandomBonusState">
+            <summary>
+            Dynamic Random Bonus State
+            </summary>
+        </member>
+        <member name="F:DynamicRandomBonusState.idle">
+            <remarks/> 
+        </member>
+        <member name="F:DynamicRandomBonusState.bonusStarted">
+            <remarks/> 
+            <summary>
+            Bonus Game has been started.
+            </summary>
+        </member>
+        <member name="F:DynamicRandomBonusState.codeSent">
+            <summary>
+            Code has been sent to EBS by game
+            </summary>
+        </member>
+        <member name="F:DynamicRandomBonusState.responseReceived">
+            <summary>
+            A Response has been received from EBS
+            </summary>
+        </member>
+        <member name="T:BTModalDialogManager">
+            <summary>
+            BTModalDialogManager provides access to different types of in-game Modal Windows.
+            </summary>
+        </member>
+        <member name="M:BTModalDialogManager.ShowDialog(System.String,System.String,DialogType,OnDialogClose)">
+            <summary>
+            Show a Modal Dialog with the specified message
+            </summary>
+            <param name="message">Message text to be rendered</param>
+            <param name="messageDetail">(optional) More detailed info to be presented to the user</param>
+            <param name="dialogType">Type of the Modal Dialog</param>
+            <param name="onDialogClose">(optional) callback to be invoked when this dialog closes</param>
+        </member>
+        <member name="M:BTModalDialogManager.ShowDialog(System.String,System.String,DialogType,OnDialogClose,System.Boolean)">
+            <summary>
+            Show a Modal Dialog with the specified message
+            </summary>
+            <param name="message">Message text to be rendered</param>
+            <param name="messageDetail">(optional) More detailed info to be presented to the user</param>
+            <param name="dialogType">Type of the Modal Dialog</param>
+            <param name="captureScreen">Capture the screen with the error message for debugging purposes</param>
+            <param name="onDialogClose">(optional)callback to be invoked when this dialog closes</param>/// 
+        </member>
+        <member name="M:BTModalDialogManager.ShowDialog(System.String,System.String,DialogType,OnDialogClose,System.Boolean,System.Boolean,System.Single)">
+            <summary>
+            Show a Modal Dialog with the specified message
+            </summary>
+            <param name="message">Message text to be rendered</param>
+            <param name="messageDetail">(optional) More detailed info to be presented to the user</param>
+            <param name="dialogType">Type of the Modal Dialog</param>
+            <param name="onDialogClose">(optional) callback to be invoked when this dialog closes</param>
+            <param name="captureScreen">Capture the screen with the error message for debugging purposes</param>
+            <param name="autoHide">Auto hide the message after a delay</param>
+            <param name="time">time duration to show the message for in seconds</param>
+        </member>
+        <member name="T:BTSocial">
+            <summary>
+            Class exposing social parameters
+            </summary>
+        </member>
+        <member name="P:BTSocial.UseSocialSharing">
+            <summary>
+            Boolean indicating if socialSharing is enabled or not.
+            </summary>
+        </member>
+        <member name="P:BTSocial.PromptPlayerForSocialSharing">
+            <summary>
+            Boolean indicating if user should be prompted for confirmation before a social sharing action is performed.
+            </summary>
+        </member>
+        <member name="T:BTUserMessageManager">
+            <summary>
+            Class responsible for managing all the User facing messages.
+            </summary>
+        </member>
+        <member name="T:BTWallet">
+            <summary>
+            Class mapping for the Wallet Information
+            </summary>
+        </member>
+        <member name="M:BTWallet.SimulateBalance(System.Decimal)">
+            <summary>
+            Helper function to simulate Wallet Balance
+            Has Effect only in Unity Editor Mode or Standalone mode
+            </summary>
+        </member>
+        <member name="M:BTWallet.SimulateTotalBet(System.Decimal)">
+            <summary>
+            Helper function to simulate Total Bet
+            Has Effect only in Unity Editor Mode or Standalone mode
+            </summary>
+        </member>
+        <member name="P:BTWallet.TotalBet">
+            <summary>
+            The Total Bet placed by the player for this promotion. eg: Monopoly: Total amount spent on purchases.
+            </summary>
+        </member>
+        <member name="P:BTWallet.TotalBalance">
+            <summary>
+            The Last known Total Balance of the EGM/Player Wallet.
+            </summary>
+        </member>
+        <member name="T:InitializeGameAPI">
+            <summary>
+            InitializeGameAPI class initializes the BTUGameAPI framework
+            </summary>
+        </member>
+        <member name="M:InitializeGameAPI.Awake">
+            <summary>
+            Awake method overridden as dictated by Unity
+            </summary>
+        </member>
+        <member name="T:UnitSetting">
+            <summary>
+            Class defintion for Lotto Theme Settings Unit
+            </summary>
+        </member>
+        <member name="F:UnitSetting.number">
+            <summary>
+            indicating the number of the unit.
+            </summary>
+        </member>
+        <member name="F:UnitSetting.startSymbol">
+            <summary>
+            Starting symbol of this unit.
+            </summary>
+        </member>
+        <member name="F:UnitSetting.endSymbol">
+            <summary>
+            Ending symbol of this unit.
+            </summary>
+        </member>
+        <member name="F:UnitSetting.symbolsToSelect">
+            <summary>
+            Number of symbols that should be selected for this unit.
+            </summary>
+        </member>
+        <member name="T:LottoSettings">
+            <summary>
+            Class definition for Lotto Theme Settings
+            </summary>
+        </member>
+        <member name="M:LottoSettings.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:LottoSettings.ToString">
+            <remarks/>
+        </member>
+        <member name="P:LottoSettings.UnitSettings">
+            <summary>
+            List of units within the settings.
+            </summary>
+        </member>
+        <member name="T:RoundResult">
+            <summary>
+            Round Result Base Class
+            </summary>
+        </member>
+        <member name="T:WinOption">
+            <summary>
+            Win Option Definition
+            </summary>
+        </member>
+        <member name="F:WinOption.id">
+            <summary>
+            Win Id
+            </summary>
+        </member>
+        <member name="F:WinOption.amount">
+            <summary>
+            Win Amount
+            </summary>
+        </member>
+        <member name="T:DevLevelWin">
+            <summary>
+            Win Per Dev Level
+            </summary>
+        </member>
+        <member name="F:DevLevelWin.devLevelId">
+            <summary>
+            Development Level Id - Maps to corresponding Enum
+            </summary>
+        </member>
+        <member name="F:DevLevelWin.winAmount">
+            <summary>
+            Win Amount
+            </summary>
+        </member>
+        <member name="F:DevLevelWin.winningOptionId">
+            <summary>
+            Winning Option Id
+            </summary>
+        </member>
+        <member name="F:DevLevelWin.winOptions">
+            <summary>
+            Collection of Win Options
+            </summary>
+        </member>
+        <member name="M:DevLevelWin.#ctor(System.Int32,System.Decimal,System.Int32,System.String)">
+            <summary>
+            Constructor for Dev Level Win
+            </summary>
+            <param name="devLevelId">Development Level Id</param>
+            <param name="winAmount">Win Amount</param>
+            <param name="winningOptionId">Winning Option Id</param>
+            <param name="winString">Winning String</param>
+        </member>
+        <member name="P:DevLevelWin.WinString">
+            <summary>
+            The Win String. Only for data construction.
+            </summary>
+        </member>
+        <member name="P:DevLevelWin.Item(System.Int32)">
+            <summary>
+            Indexer to access the WinOption directly.
+            </summary>
+            <param name="i">byte</param>
+            <returns>DevelopmentLevel</returns>
+        </member>
+        <member name="T:TileWin">
+            <summary>
+            Tile Win Information
+            </summary>
+        </member>
+        <member name="F:TileWin.totalWinners">
+            <summary>
+            Total Winner For This Tile
+            </summary>
+        </member>
+        <member name="F:TileWin.devLevelWin">
+            <summary>
+            Win Options for all the Development Levels
+            </summary>
+        </member>
+        <member name="P:TileWin.Item(System.Int32)">
+            <summary>
+            Indexer to access the DevLevel directly.
+            Note values supplied must be from 0. If your devLevel starts at 1 please supply 0;
+            </summary>
+            <param name="i">byte</param>
+            <returns>DevelopmentLevel</returns>
+        </member>
+        <member name="T:SimpleResult">
+            <summary>
+            Simple Result With Tile Win Info.
+            </summary>
+        </member>
+        <member name="F:SimpleResult.tileWin">
+            <summary>
+            Tile Win For Roulette Stop.
+            </summary>
+        </member>
+        <member name="T:TileAction">
+            <summary>
+            Tile Action Definition
+            </summary>
+        </member>
+        <member name="F:TileAction.caption">
+            <summary>
+            Caption to display to user.
+            </summary>
+        </member>
+        <member name="F:TileAction.isPreMove">
+            <summary>
+            Is this action to be performed before Mr. Monopoly moves from the current tile.
+            </summary>
+        </member>
+        <member name="T:ActionAwardAll">
+            <summary>
+            Action Award All
+            </summary>
+        </member>
+        <member name="F:ActionAwardAll.award">
+            <summary>
+            Award Amount.
+            </summary>
+        </member>
+        <member name="T:ActionAwardAllMultiplier">
+            <summary>
+            Action Award All Multiplier
+            </summary>
+        </member>
+        <member name="F:ActionAwardAllMultiplier.multiplier">
+            <summary>
+            Multiplier. Calculate award as multiplier*totalBet
+            </summary>
+        </member>
+        <member name="T:ActionAwardWinner">
+            <summary>
+            Action Award Winner
+            </summary>
+        </member>
+        <member name="F:ActionAwardWinner.tileWin">
+            <summary>
+            Tile Win Information
+            </summary>
+        </member>
+        <member name="T:ActionDoNothing">
+            <summary>
+            Action Do Nothing
+            </summary>
+        </member>
+        <member name="T:ActionGetOutOfJail">
+            <summary>
+            Action Get Out Of Jail
+            </summary>
+        </member>
+        <member name="T:ActionGoToJail">
+            <summary>
+            Action Go To Jail
+            </summary>
+        </member>
+        <member name="T:CardAction">
+            <summary>
+            Card Action Definition
+            </summary>
+        </member>
+        <member name="T:CardActionAward">
+            <summary>
+            Card Action Award
+            </summary>
+        </member>
+        <member name="F:CardActionAward.award">
+            <summary>
+            Award Amount
+            </summary>
+        </member>
+        <member name="T:CardActionAwardMultiplier">
+            <summary>
+            Card Action Award Multiplier
+            </summary>
+        </member>
+        <member name="F:CardActionAwardMultiplier.multiplier">
+            <summary>
+            Multiplier for the award
+            </summary>
+        </member>
+        <member name="F:CardActionAwardMultiplier.targetTileId">
+            <summary>
+            Target tile id to which this multiplier applies
+            </summary>
+        </member>
+        <member name="T:CardActionGoTo">
+            <summary>
+            Card Action Go To
+            </summary>
+        </member>
+        <member name="T:CardActionGoToNext">
+            <summary>
+            Card Action Go To Next
+            </summary>
+        </member>
+        <member name="T:CardActionGoToJail">
+            <summary>
+            Card Action Go To Jail
+            </summary>
+        </member>
+        <member name="T:CardActionMoveBy">
+            <summary>
+            Card Action Move By
+            </summary>
+        </member>
+        <member name="T:CardActionGetOutOfJail">
+            <summary>
+            Card Action Get Out Of Jail
+            </summary>
+        </member>
+        <member name="T:ActionDrawCard">
+            <summary>
+            Card Action Draw Card
+            </summary>
+        </member>
+        <member name="F:ActionDrawCard.cardAction">
+            <summary>
+            Card Actions
+            </summary>
+        </member>
+        <member name="T:Step">
+            <summary>
+            Step definition
+            </summary>
+        </member>
+        <member name="F:Step.order">
+            <summary>
+            Step ordinal
+            </summary>
+        </member>
+        <member name="F:Step.tileId">
+            <summary>
+            Tile Id
+            </summary>
+        </member>
+        <member name="F:Step.tileOrdinal">
+            <summary>
+            Tile Ordinal
+            </summary>
+        </member>
+        <member name="F:Step.tileType">
+            <summary>
+            Tile Type
+            </summary>
+        </member>
+        <member name="F:Step.diceOneOutcome">
+            <summary>
+            Dice One Outcome
+            </summary>
+        </member>
+        <member name="F:Step.diceTwoOutcome">
+            <summary>
+            Dice Two Outcome
+            </summary>
+        </member>
+        <member name="F:Step.isFinal">
+            <summary>
+            Is Final Step
+            </summary>
+        </member>
+        <member name="F:Step.isRollRequired">
+            <summary>
+            Is Dice Roll Required
+            </summary>
+        </member>
+        <member name="F:Step.isJump">
+            <summary>
+            Do We Jump directly to another tile without running around.
+            </summary>
+        </member>
+        <member name="F:Step.movementDirection">
+            <summary>
+            Movement Direction
+            </summary>
+        </member>
+        <member name="F:Step.action">
+            <summary>
+            Collection of Tile Actions
+            </summary>
+        </member>
+        <member name="T:ExtendedResult">
+            <summary>
+            Extended Result Definition
+            </summary>
+        </member>
+        <member name="F:ExtendedResult.steps">
+            <summary>
+            Collection of steps.
+            </summary>
+        </member>
+        <member name="P:ExtendedResult.Item(System.Int32)">
+            <summary>
+            Indexer to access the Step directly by order
+            </summary>
+            <param name="order">int</param>
+            <returns>Step</returns>
+        </member>
+        <member name="T:MonopolyResults">
+            <summary>
+            Monopoly Result Definition
+            </summary>
+        </member>
+        <member name="F:MonopolyResults.wheelResult">
+            <summary>
+            Roulette Wheel Result.
+            </summary>
+        </member>
+        <member name="F:MonopolyResults.roundResult">
+            <summary>
+            Results For The Game. Either Go Around or Simple Result.
+            </summary>
+        </member>
+        <member name="T:Board">
+            <summary>
+            Class Definition for Monopoly Board (Class container for a list of tiles.)
+            </summary>
+        </member>
+        <member name="F:Board.tiles">
+            <summary>
+            List of tiles within the Board.
+            </summary>
+        </member>
+        <member name="M:Board.op_Addition(Board,Tile)">
+            <summary>
+            operator overload to support adding a Tile to a collection of Tiles using += or +.
+            </summary>
+            <param name="board">Board</param>
+            <param name="tile">Tile</param>
+            <returns>Board</returns>
+        </member>
+        <member name="M:Board.Clear">
+            <summary>
+            Clears the collection of tiles.
+            </summary>
+        </member>
+        <member name="M:Board.ToString">
+            <summary>
+            Overridden To String method.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Board.Item(System.Int32)">
+            <summary>
+            Indexer to access the Tile directly by ordinal
+            </summary>
+            <param name="ordinal">int</param>
+            <returns>Tile</returns>
+        </member>
+        <member name="T:DevelopmentLevel">
+            <summary>
+            Class Definition for Development Levels
+            </summary>
+        </member>
+        <member name="F:DevelopmentLevel.id">
+            <summary>
+            Id for the development level - Maps to  RailroadDevLevel, PropertyDevLevel and UnityDevLevel
+            </summary>
+        </member>
+        <member name="F:DevelopmentLevel.cost">
+            <summary>
+            Cost to purchase the development level.
+            </summary>
+        </member>
+        <member name="F:DevelopmentLevel.minWin">
+            <summary>
+            Minimum Win for the development level.
+            </summary>
+        </member>
+        <member name="F:DevelopmentLevel.maxWin">
+            <summary>
+            Maximum Win for the development level.
+            </summary>
+        </member>
+        <member name="M:DevelopmentLevel.#ctor(System.Int32,System.Decimal,System.Decimal,System.Decimal)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="id">id based on corresponding developmentLevel enum</param>
+            <param name="cost">cost to purchase this level</param>
+            <param name="minWin">min payout for this level</param>
+            <param name="maxWin">max payout for this level</param>
+        </member>
+        <member name="T:DevLevelDetails">
+            <summary>
+            Details for the development level per tile.
+            </summary>
+        </member>
+        <member name="F:DevLevelDetails.devLevels">
+            <summary>
+            List of development levels.
+            </summary>
+        </member>
+        <member name="P:DevLevelDetails.Value">
+            <summary>
+            Sets the value string for all development levels.
+            </summary>
+        </member>
+        <member name="T:Tile">
+            <summary>
+            Class Definition for Tile on Board
+            </summary>
+        </member>
+        <member name="F:Tile.tileId">
+            <summary>
+            Unique identifier for the Tile.
+            </summary>
+        </member>
+        <member name="F:Tile.tileOrdinal">
+            <summary>
+            Position on the board.//0->40
+            </summary>
+        </member>
+        <member name="F:Tile.tileType">
+            <summary>
+            Unique identifier for the ticket.
+            </summary>
+        </member>
+        <member name="F:Tile.name">
+            <summary>
+            Full Display name for the Tile.
+            </summary>
+        </member>
+        <member name="F:Tile.shortName">
+            <summary>
+            Short Display name for the Tile.
+            </summary>
+        </member>
+        <member name="F:Tile.canPurchase">
+            <summary>
+            Is Tile Purchasable?
+            </summary>
+        </member>
+        <member name="F:Tile.devLevelDetails">
+            <summary>
+            Development Level Details For The Tile.
+            </summary>
+        </member>
+        <member name="F:Tile.currentDevLevel">
+            <summary>
+            Current Development Level as an Integer. To Get Mapped Level Use CurrentDevLevel() Instead.
+            </summary>
+        </member>
+        <member name="F:Tile.desiredDevLevel">
+            <summary>
+            Desired Development Level for Purchase.
+            </summary>
+        </member>
+        <member name="M:Tile.TileIdType">
+            <summary>
+            Enumerated TileIdType
+            </summary>
+            <returns>TileIdType</returns>
+        </member>
+        <member name="M:Tile.ToString">
+            <summary>
+            Overridden To String method.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Tile.Item(System.Int32)">
+            <summary>
+            Indexer to access the DevLevel directly.
+            Note values supplied must be from 0. If your devLevel starts at 1 please supply 0;
+            </summary>
+            <param name="i">byte</param>
+            <returns>DevelopmentLevel</returns>
+        </member>
+        <member name="T:Sector">
+            <summary>
+            Sector defining each segment of the wheel.
+            </summary>
+        </member>
+        <member name="F:Sector.sectorOrdinal">
+            <summary>
+            Position on the Wheel.//0->31
+            </summary>
+        </member>
+        <member name="F:Sector.tileId">
+            <summary>
+            Tile id for corresponding tile on board.
+            </summary>
+        </member>
+        <member name="T:Wheel">
+            <summary>
+            Class definition for Wheel
+            </summary>
+        </member>
+        <member name="F:Wheel.sectors">
+            <summary>
+            Collection of sectors that make up the wheel.
+            </summary>
+        </member>
+        <member name="T:MonopolySettings">
+            <summary>
+            Class definition for Monopoly Theme Settings
+            </summary>
+        </member>
+        <member name="F:MonopolySettings.board">
+            <summary>
+            Board definition.
+            </summary>
+        </member>
+        <member name="F:MonopolySettings.wheel">
+            <summary>
+            Roulette wheel definition.
+            </summary>
+        </member>
+        <member name="T:PayLevel">
+            <summary>
+            Class describing the individual PayLevel for this instance of the Lotto promotion.
+            </summary>
+        </member>
+        <member name="F:PayLevel.id">
+            <summary>
+            Unique Identifier for the PayLevel
+            </summary>
+        </member>
+        <member name="F:PayLevel.value">
+            <summary>
+            Winning Value for this PayLevel
+            </summary>
+        </member>
+        <member name="F:PayLevel.formattedValue">
+            <summary>
+            Formatted Winning Value for this PayLevel
+            </summary>
+        </member>
+        <member name="F:PayLevel.noOfWinningTickets">
+            <summary>
+            Number of winning tickets for this pay level.
+            </summary>
+        </member>
+        <member name="F:PayLevel.isPaying">
+            <summary>
+            Determines if this pay level paying out a value.
+            </summary>
+        </member>
+        <member name="F:PayLevel.prizePerTicket">
+            <summary>
+            Describes the prize amount that goes for this level if a ticket hits this level.
+            </summary>
+        </member>
+        <member name="F:PayLevel.isProgressive">
+            <summary>
+            Describes if this paylevel value is a progressive and if is split between winning tickets.
+            </summary>
+        </member>
+        <member name="M:PayLevel.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:PayLevel.#ctor(System.Byte,System.Decimal,System.String,System.String,System.Int32,System.Boolean,System.Decimal,System.Boolean)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="id">byte</param>
+            <param name="value">decimal</param>
+            <param name="formattedValue">string</param>
+            <param name="LevelDesc">string</param>
+            <param name="noOfWinningTickets">int</param>
+            <param name="isPaying">bool</param>
+            <param name="prizePerTicket">decimal</param>
+            <param name="isProgressive">bool</param>
+        </member>
+        <member name="P:PayLevel.ValueDblToDec">
+            <remarks/>
+        </member>
+        <member name="P:PayLevel.LevelDesc">
+            <summary>
+            Describing the level to which this win must be applied.
+            Sample Value: 4+1 => 4 symbols from 1st unit and 1 symbol from 2nd unit
+            </summary>
+        </member>
+        <member name="P:PayLevel.LevelSplit">
+            <summary>
+            Level Split per Unit
+            </summary>
+        </member>
+        <member name="P:PayLevel.PrizePerTicketDblToDec">
+            <remarks/>
+        </member>
+        <member name="T:PayLevelValues">
+            <summary>
+            Class describing the PayLevels for this instance of the Lotto promotion.
+            </summary>
+        </member>
+        <member name="F:PayLevelValues.payLevel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:PayLevelValues.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:PayLevelValues.ToString">
+            <remarks/>
+        </member>
+        <member name="T:PayLine">
+            <summary>
+            Class mapping for every payline of a paytable.
+            </summary>
+        </member>
+        <member name="T:PayTable">
+            <summary>
+            Class mapping for pay table based promotions - eg: uSpin.
+            </summary>
+        </member>
+        <member name="T:BTRenderingStats">
+            <summary>
+            BTRenderingStats will provide vital rendering information that can help with minimal performance analysis.
+            For advanced and in-depth analyis kindly use Unity Profiler.
+            </summary>
+        </member>
+        <member name="T:BTGameSettings">
+            <summary>
+            This class contains all the global game settings which are universal across bonus games. Contains several handy static methods that can drive the game behaviour.
+            </summary>
+        </member>
+        <member name="M:BTGameSettings.SimulateAppType(AppType)">
+            <summary>
+            Helper function to help Simulate Different App Types
+            Has Effect only in Unity Editor Mode.
+            </summary>
+        </member>
+        <member name="M:BTGameSettings.SimulateLVDS">
+            <summary>
+            Helper function to help Simulate LVDS mode by setting isLVDS flag to true.
+            Has Effect only in Unity Editor Mode.
+            </summary>
+        </member>
+        <member name="M:BTGameSettings.SimulateV32">
+            <summary>
+            Helper function to help Simulate LVDS mode by setting isLVDS and isV32 flags to true.
+            Has Effect only in Unity Editor Mode.
+            </summary>
+        </member>
+        <member name="M:BTGameSettings.SimulateWideScreen">
+            <summary>
+            Helper function to help Simulate WideScreen mode.
+            Has Effect only in Unity Editor Mode.
+            </summary>
+        </member>
+        <member name="M:BTGameSettings.SimulateCurrencyCulture(System.String)">
+            <summary>
+            Helper function to help simulate different currency culture.
+            Has effect only in the Editor mode.
+            </summary>
+            <param name="lang">eg: en-US, zh-CN</param>
+        </member>
+        <member name="M:BTGameSettings.SimulateLanguage(System.String)">
+            <summary>
+            Helper function to help simulate different text culture.
+            Has effect only in the Editor mode.
+            </summary>
+            <param name="lang">eg: en-US, zh-CN</param>
+        </member>
+        <member name="M:BTGameSettings.SimulateFrameworkLanguage(System.String)">
+            <summary>
+            Helper function to help simulate different text cultures for error messages shown by framework
+            Has effect only in the Editor mode.
+            </summary>
+            <param name="lang">eg: en-US, zh-CN</param>
+        </member>
+        <member name="M:BTGameSettings.IsLVDS">
+            <summary>
+            Returns a bool indicating if the game is running on the LVDS.
+            </summary>
+            <returns>bool</returns>
+        </member>
+        <member name="M:BTGameSettings.IsV32">
+            <summary>
+            Returns a bool indicating if the game is running on the V32.
+            </summary>
+            <returns>bool</returns>
+        </member>
+        <member name="M:BTGameSettings.IsStandalone">
+            <summary>
+            Returns a bool indicating if the game is running in standalone mode => No external process is hosting the game and communicating with it.
+            </summary>
+            <returns>bool</returns>
+        </member>
+        <member name="M:BTGameSettings.IsDemo">
+            <summary>
+            Returns a bool indicating if the game should run in Demo mode.
+            </summary>
+            <returns>bool</returns>
+        </member>
+        <member name="M:BTGameSettings.IsDisplayOnPC">
+            <summary>
+            Returns a bool indicating if the game is running on a iVIEW. 
+            FALSE indicates that the game is running on an iVIEW. 
+            TRUE indicates that it is on a normal laptop on PC upon which the Screen is automatically set to non full screen/windowed mode - useful for CDK testing.
+            </summary>
+            <returns>bool</returns>
+        </member>
+        <member name="M:BTGameSettings.IsPerformingPeriodTest">
+            <summary>
+            Returns a bool indicating if the game is supposed to be running a period test
+            </summary>
+            <returns>bool</returns>
+        </member>
+        <member name="M:BTGameSettings.IsPerformingDistributionTest">
+            <summary>
+            Returns a bool indicating if the game is supposed to be running a distribution test 
+            </summary>
+            <returns>bool</returns>
+        </member>
+        <member name="M:BTGameSettings.IsStandaloneTournamentSetup">
+            <summary>
+            Returns a bool indicating if the iVIEW is configured with no SDS-CMP, ACSC etc back end for player management.
+            Primarily used to Standalone Tournaments.
+            </summary>
+            <returns>bool</returns>
+        </member>
+        <member name="M:BTGameSettings.MaxNumScreenCapFiles">
+            <summary>
+            Returns an int indicating the maximum number of screen capture files allowed for the game.
+            </summary>
+            <returns>int </returns>
+        </member>
+        <member name="P:BTGameSettings.Language">
+            <summary>
+            Returns the language code
+            </summary>
+            <returns>eg: en-US, zh-CN</returns>
+        </member>
+        <member name="P:BTGameSettings.Currency">
+            <summary>
+            Returns the currency code
+            </summary>
+            <returns>eg: en-US, zh-CN</returns>
+        </member>
+        <member name="P:BTGameSettings.CurrentAppType">
+            <summary>
+            Returns the AppType of this promotion
+            </summary>
+            <returns>AppType</returns>
+        </member>
+        <member name="P:BTGameSettings.GameTheme">
+            <summary>
+            Returns the GameTheme of this promotion
+            </summary>
+            <returns>GameTheme</returns>
+        </member>
+        <member name="P:BTGameSettings.GameMode">
+            <summary>
+            profile_startSource
+            Get the Start Mode for the game - player or server start.
+            </summary>
+        </member>
+        <member name="P:BTGameSettings.GameName">
+            <summary>
+            Returns the Game Executable Name
+            </summary>
+        </member>
+        <member name="T:MatchUnitResult">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MatchUnitResult.Number">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MatchUnitResult.MatchCount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:MatchTicketResult">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:MatchTicketResult.#ctor">
+            <remarks/>
+        </member>
+        <member name="M:MatchTicketResult.ToString">
+            <remarks/>
+        </member>
+        <member name="P:MatchTicketResult.ID">
+            <summary>
+            Unique identifier for the ticket.
+            </summary>
+        </member>
+        <member name="P:MatchTicketResult.Win">
+            <summary>
+            Win for this ticket.
+            </summary>
+        </member>
+        <member name="P:MatchTicketResult.MatchPerUnit">
+            <summary>
+            List of matches per unit of a given symbol
+            </summary>
+        </member>
+        <member name="P:MatchTicketResult.PayMethod">
+            <summary>
+            Payment Method for this Ticket Win. Currently only wallet and handpay are the 2 supported values.
+            </summary>
+        </member>
+        <member name="P:MatchTicketResult.LevelDesc">
+            <summary>
+            Describing the level to which this win applies.
+            Sample Value: 4+1 => 4 symbols from 1st unit and 1 symbol from 2nd unit
+            </summary>
+        </member>
+        <member name="P:MatchTicketResult.Item(System.Int32)">
+            <summary>
+            Indexer to access the Unit directly.
+            </summary>
+            <param name="i">byte</param>
+            <returns>Unit</returns>
+        </member>
+        <member name="T:DrawingResult">
+            <summary>
+            Class definition for the Drawing Result for this Lotto entry.
+            </summary>
+        </member>
+        <member name="M:DrawingResult.#ctor">
+            <remarks/>
+        </member>
+        <member name="M:DrawingResult.MatchTicketResultSortedByWin(System.ComponentModel.ListSortDirection)">
+            <summary>
+            Helped method to sort the tickets in the result by Win Amount.
+            </summary>
+            <param name="direction">ListSortDirection</param>
+            <returns>List&lt;MatchTicketResult&gt;</returns>
+        </member>
+        <member name="M:DrawingResult.op_Addition(DrawingResult,MatchTicketResult)">
+            <summary>
+            operator overload to support adding a MatchTicket to a DrawingResult using += or +.
+            </summary>
+            <param name="drawingResult">DrawingResult</param>
+            <param name="matchTicketResult">MatchTicketResult</param>
+            <returns>DrawingResult</returns>
+        </member>
+        <member name="M:DrawingResult.AddTicket(MatchTicketResult)">
+            <summary>
+            Add a Winning MatchTicket object to the Drawing Result. Skips null objects.
+            </summary>
+            <param name="newMatchTicketResult">MatchTicketResult</param>
+        </member>
+        <member name="M:DrawingResult.ToString">
+            <remarks/>
+        </member>
+        <member name="M:DrawingResult.op_Equality(DrawingResult,DrawingResult)">
+            <summary>
+            == operator overload.
+            </summary>
+            <param name="one">LHS operand</param>
+            <param name="two">RHS operand</param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:DrawingResult.op_Inequality(DrawingResult,DrawingResult)">
+            <summary>
+            == operator overload.
+            </summary>
+            <param name="one">LHS operand</param>
+            <param name="two">RHS operand</param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:DrawingResult.Equals(DrawingResult)">
+            <summary>
+            Checks equality of 2 DrawingResult objects
+            </summary>
+            <param name="drawingResult">DrawingResult</param>
+            <returns>bool</returns>
+        </member>
+        <member name="P:DrawingResult.TotalWin">
+            <summary>
+            Total Win for this drawing.
+            </summary>
+        </member>
+        <member name="P:DrawingResult.MatchTicketResult">
+            <summary>
+            Match Result Per Ticket and Corresponding Win.
+            </summary>
+        </member>
+        <member name="P:DrawingResult.Item(System.Int32)">
+            <summary>
+            indexer to access the TicketResult list directly.
+            </summary>
+            <param name="index">byte</param>
+            <returns>Symbol</returns>
+        </member>
+        <member name="T:Symbol">
+            <summary>
+            Unique Symbol within each Unit of the ticket.
+            </summary>
+        </member>
+        <member name="M:Symbol.#ctor">
+            <remarks/>
+        </member>
+        <member name="M:Symbol.#ctor(System.String)">
+            <summary>
+            Symbol constructor with String value
+            </summary>
+            <param name="value">string</param>
+        </member>
+        <member name="M:Symbol.#ctor(System.Int32)">
+            <summary>
+            Symbol constructor with int value.
+            </summary>
+            <param name="value">int</param>
+        </member>
+        <member name="M:Symbol.op_Implicit(Symbol)~System.String">
+            <summary>
+            operator overload to support implicit conversion from Symbol to string.
+            </summary>
+            <param name="s">Symbol</param>
+            <returns>string</returns>
+        </member>
+        <member name="M:Symbol.op_Implicit(System.String)~Symbol">
+            <summary>
+            operator overload to support implicit conversion from string to Symbol.
+            </summary>
+            <param name="s">string</param>
+            <returns>Symbol</returns>
+        </member>
+        <member name="M:Symbol.op_Implicit(Symbol)~System.Int32">
+            <summary>
+            operator overload to support implicit conversion from Symbol to int.
+            </summary>
+            <param name="s">Symbol object</param>
+            <returns>int.MinValue if the symbol is not an int, else corresponding int value.</returns>
+        </member>
+        <member name="M:Symbol.op_Implicit(System.Int32)~Symbol">
+            <summary>
+            operator overload to support implicit conversion from int to Symbol.
+            </summary>
+            <param name="s">integer val</param>
+            <returns>Symbol object</returns>
+        </member>
+        <member name="M:Symbol.op_Equality(Symbol,Symbol)">
+            <summary>
+            == operator overload.
+            </summary>
+            <param name="one">LHS operand</param>
+            <param name="two">RHS operand</param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:Symbol.op_Inequality(Symbol,Symbol)">
+            <summary>
+            != operator overload.
+            </summary>
+            <param name="one">LHS operand</param>
+            <param name="two">RHS operand</param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:Symbol.Equals(System.Object)">
+            <summary>
+            Equals override for the symbol
+            </summary>
+            <param name="o"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Symbol.GetHashCode">
+            <summary>
+            Hashcode override.
+            </summary>
+            <returns>int</returns>
+        </member>
+        <member name="F:Symbol.value">
+            <summary>
+            The value of the Symbol. Usually a string or an int.
+            </summary>
+        </member>
+        <member name="T:Unit">
+            <summary>
+            Class representation of each Unit within a ticket.
+            </summary>
+        </member>
+        <member name="M:Unit.#ctor">
+            <remarks/>
+        </member>
+        <member name="M:Unit.#ctor(System.Byte,Symbol[])">
+            <summary>
+            Constructor to initialize the Unit with symbols. Null objects are not added.
+            </summary>
+            <param name="unitNumber">unique Unit number</param>
+            <param name="symbols">variable number of Symbol</param>
+        </member>
+        <member name="M:Unit.#ctor(System.Byte,System.Collections.Generic.List{Symbol})">
+            <summary>
+            Constructor to initialize the Unit with symbols. Null objects are not added.
+            </summary>
+            <param name="unitNumber">unique Unit number</param>
+            <param name="symbols">List of type Symbol</param>
+        </member>
+        <member name="M:Unit.op_Addition(Unit,Symbol)">
+            <summary>
+            operator overload to support adding a Symbol to a Unit using += or +.
+            </summary>
+            <param name="u">Unit</param>
+            <param name="s">Symbol</param>
+            <returns>Unit</returns>
+        </member>
+        <member name="M:Unit.AddSymbol(Symbol)">
+            <summary>
+            Add a symbol object to the Unit
+            </summary>
+            <param name="newSymbol">Symbol</param>
+        </member>
+        <member name="M:Unit.Contains(Symbol)">
+            <summary>
+            Check to see if the unit contains a particular symbol
+            </summary>
+            <param name="inSymbol">Symbol</param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:Unit.Occurences(Symbol)">
+            <summary>
+            Method to calculate the occurences of a particular symbol within this unit.
+            </summary>
+            <param name="inSymbol">Symbol</param>
+            <returns>int</returns>
+        </member>
+        <member name="M:Unit.Occurences(System.Collections.Generic.List{Symbol})">
+            <summary>
+            Method to calculate the total occurences of a List symbol within this unit.
+            </summary>
+            <param name="inSymbols">Symbol List</param>
+            <returns>int</returns>
+        </member>
+        <member name="M:Unit.ToString">
+            <summary>
+            Overridden To String method.
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="F:Unit.number">
+            <summary>
+            indicating the number of the unit.
+            </summary>
+        </member>
+        <member name="F:Unit.symbol">
+            <summary>
+            List of symbols within this unit of the ticket.
+            </summary>
+        </member>
+        <member name="P:Unit.Item(System.Int32)">
+            <summary>
+            indexer to access the symbol list directly.
+            </summary>
+            <param name="index">byte</param>
+            <returns>Symbol</returns>
+        </member>
+        <member name="P:Unit.Count">
+            <summary>
+            Count of Symbols within the Unit.
+            </summary>
+            <returns>int</returns>
+        </member>
+        <member name="T:Ticket">
+            <summary>
+            Class describing the structure of a Ticket.
+            </summary>
+        </member>
+        <member name="M:Ticket.#ctor">
+            <remarks/>
+        </member>
+        <member name="M:Ticket.#ctor(Unit[])">
+            <summary>
+            Constructor to initialize the Ticket with Units. Skips null objects.
+            </summary>
+            <param name="units">variable number of Unit</param>
+        </member>
+        <member name="M:Ticket.#ctor(System.Collections.Generic.List{Unit})">
+            <summary>
+            Constructor to initialize the Ticket with Units. Skips null objects.
+            </summary>
+            <param name="units">List of Unit</param>
+        </member>
+        <member name="M:Ticket.AddUnit(Unit)">
+            <summary>
+            Add a Unit to the Ticket.
+            </summary>
+            <param name="newUnit">Unit</param>
+        </member>
+        <member name="M:Ticket.op_Addition(Ticket,Unit)">
+            <summary>
+            operator overload to support adding a Unit to a Ticket using += or +.
+            </summary>
+            <param name="t">Ticket</param>
+            <param name="u">Unit</param>
+            <returns>Ticket</returns>
+        </member>
+        <member name="M:Ticket.ToString">
+            <summary>
+            Overridden To String method.
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:Ticket.ToStringWithID">
+            <summary>
+            Overridden To String method.
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="F:Ticket.id">
+            <summary>
+            Unique identifier for the ticket.
+            </summary>
+        </member>
+        <member name="F:Ticket.unit">
+            <summary>
+            List of units within a ticket.
+            </summary>
+        </member>
+        <member name="P:Ticket.Item(System.Int32)">
+            <summary>
+            Indexer to access the Unit directly.
+            </summary>
+            <param name="i">byte</param>
+            <returns>Unit</returns>
+        </member>
+        <member name="P:Ticket.Count">
+            <summary>
+            Count of Units within the Ticket.
+            </summary>
+            <returns>int</returns>
+        </member>
+        <member name="T:Tickets">
+            <summary>
+            Class describing a grouping of tickets.
+            </summary>
+        </member>
+        <member name="M:Tickets.#ctor">
+            <remarks/>
+        </member>
+        <member name="M:Tickets.#ctor(Ticket[])">
+            <summary>
+            Constructor to initialize the Tickets with Ticket. Skips null objects.
+            </summary>
+            <param name="tickets">variable number of Ticket</param>
+        </member>
+        <member name="M:Tickets.#ctor(System.Collections.Generic.List{Ticket})">
+            <summary>
+            Constructor to initialize the Tickets with Ticket. Skips null objects.
+            </summary>
+            <param name="tickets">List of Ticket</param>
+        </member>
+        <member name="M:Tickets.op_Addition(Tickets,Ticket)">
+            <summary>
+            operator overload to support adding a Ticket to a group of Tickets using += or +.
+            </summary>
+            <param name="ts">Ticket</param>
+            <param name="t">Tickets</param>
+            <returns>Tickets</returns>
+        </member>
+        <member name="M:Tickets.AddTicket(Ticket)">
+            <summary>
+            Add a Ticket to the group of tickets.
+            </summary>
+            <param name="newTicket">Ticket</param>
+        </member>
+        <member name="M:Tickets.Winnings(Ticket,PayLevelValues)">
+            <summary>
+            Method to calculate the Win based on the Winning Ticket.
+            </summary>
+            <param name="winningTicket">Ticket</param>
+            <param name="payLevels">PayLevelValues</param>
+        </member>
+        <member name="M:Tickets.FromString(System.String)">
+            <summary>
+            Converts a string to a Tickets object if the format matches.
+            </summary>
+            <param name="input">input string in format (294#4,7,18,19,28|1)(295#7,14,16,24,27|9)(296#6,8,21,29,30|3)(297#12,16,22,23,27|10)</param>
+            <returns>Tickets</returns>
+        </member>
+        <member name="M:Tickets.ToString">
+            <summary>
+            Overridden To String method.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Tickets.ToStringWithID">
+            <summary>
+            Overridden To String method.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:Tickets.ticket">
+            <summary>
+            List of tickets within this group.
+            </summary>
+        </member>
+        <member name="P:Tickets.Item(System.Int32)">
+            <summary>
+            Indexer to access the individual Ticket object directly.
+            </summary>
+            <param name="i">short</param>
+            <returns>Ticket</returns>
+        </member>
+        <member name="P:Tickets.Count">
+            <summary>
+            Count of tickets
+            </summary>
+            <returns>int</returns>
+        </member>
+        <member name="T:TournamentSettings">
+            <summary>
+            Class mapping for tournament specific promotions.
+            </summary>
+        </member>
+    </members>
+</doc>
